@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.sky.common","com.sky.user"})
+@ComponentScan({"com.sky"})
 public class UserApplication {
 
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.sky.common","com.sky.admin"})
+@ComponentScan({"com.sky"})
 public class AdminApplication {
 
     public static void main(String[] args) {
