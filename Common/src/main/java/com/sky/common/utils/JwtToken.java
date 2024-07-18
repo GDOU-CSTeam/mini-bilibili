@@ -20,6 +20,7 @@ public class JwtToken {
 
     @Value("${jwt.key}")
     private String KEY;
+
     public String createAccessToken(String userid){
         HashMap<String, Object> headers = new HashMap<>();
         Calendar expires = Calendar.getInstance();
