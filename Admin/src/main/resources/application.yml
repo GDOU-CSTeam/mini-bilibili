@@ -152,10 +152,10 @@ spring:
 
 #OSS??
 oss:
-  endpoint: xxx
-  accessKeyId: xxx
-  accessKeySecret: xxx
-  roleArn: xxx
-  roleSessionName: xxx
-  endpointForOss: xxx
-  bucketName: xxx
+  endpoint: sts.cn-shenzhen.aliyuncs.com
+  accessKeyId: LTAI5t8Tn2AZiJSoztBJ2PEe
+  accessKeySecret: ooJoKalkuDHyDz3QkdYdSle1n0sCpG
+  roleArn: acs:ram::1320082312507942:role/w
+  roleSessionName: RamOssTest
+  endpointForOss: oss-cn-shenzhen.aliyuncs.com
+  bucketName: videotest5

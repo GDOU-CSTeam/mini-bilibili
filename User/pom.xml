@@ -20,8 +20,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sky</groupId>
-            <artifactId>mini-bilibili</artifactId>
+            <groupId>com.sky.common</groupId>
+            <artifactId>Common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
