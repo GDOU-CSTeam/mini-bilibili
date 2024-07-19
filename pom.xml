@@ -43,113 +43,143 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- Spring Boot的Web启动器，包括了Spring Web、Tomcat和相关依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Spring Boot的测试启动器，用于测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
 
+        <!-- JUnit测试框架 -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <scope>SpringTest</scope>
+            <scope>test</scope>
         </dependency>
 
+        <!-- Spring Boot的邮件服务启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
+        <!-- MyBatis Plus启动器，用于简化MyBatis的使用 -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.5</version>
         </dependency>
 
+        <!-- MyBatis Plus代码生成器 -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
             <version>3.5.3</version>
         </dependency>
+
+        <!-- Velocity引擎，用于生成代码或其他模板 -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
             <version>2.0</version>
         </dependency>
 
+        <!-- MySQL连接器 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.15</version>
         </dependency>
+
+        <!-- Lombok，用于简化JavaBean的编写 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <!-- Spring Boot的Redis启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
+
+        <!-- Commons Pool2，用于对象池化，与Redisson一起使用 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
         </dependency>
+
+        <!-- Hutool工具库 -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.8.23</version>
         </dependency>
+
+        <!-- 阿里云OSS SDK -->
         <dependency>
             <groupId>com.aliyun.oss</groupId>
             <artifactId>aliyun-sdk-oss</artifactId>
             <version>3.15.1</version>
         </dependency>
+
+        <!-- Redisson客户端，提供全面的Redis客户端功能 -->
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson-spring-boot-starter</artifactId>
             <version>3.32.0</version>
         </dependency>
+
+        <!-- Java JWT库，用于生成和验证JSON Web Token -->
         <dependency>
             <groupId>com.auth0</groupId>
             <artifactId>java-jwt</artifactId>
             <version>3.19.1</version>
         </dependency>
+
+        <!-- Spring Boot的验证启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
+        <!--Knife4j的OpenAPI 3支持，用于Swagger文档生成-->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
         </dependency>
 
+        <!-- Spring Boot的AMQP启动器，支持RabbitMQ -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
 
+        <!-- Spring Boot的安全启动器，包括Spring Security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
     </dependencies>
 
+    <!-- 构建配置，定义项目构建过程 -->
     <build>
+        <!-- 插件配置，用于项目构建 -->
         <plugins>
-            <!-- Java Checkstyle -->
+            <!-- Maven Checkstyle Plugin，用于代码风格检查 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>${version.maven.checkstyle.plugin}</version>
                 <dependencies>
-                    <!-- override default checkstyle version -->
+                    <!-- 覆盖默认Checkstyle版本 -->
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
@@ -157,6 +187,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
+                    <!-- Checkstyle配置 -->
                     <suppressionsLocation>${checkstyle.suppressions.location}</suppressionsLocation>
                     <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
                     <configLocation>${checkstyle.config.location}</configLocation>
@@ -166,6 +197,7 @@
                     <consoleOutput>true</consoleOutput>
                 </configuration>
                 <executions>
+                    <!-- Checkstyle执行配置 -->
                     <execution>
                         <id>checkstyle</id>
                         <phase>initialize</phase>

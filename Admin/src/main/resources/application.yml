@@ -15,7 +15,7 @@ knife4j:
     # 用户名
     username: root
     #用户密码
-    password: 1234
+    password: chuangshu
   # 设置配置，用于配置Knife4j的显示和其他设置
   setting:
     # 设置语言，用于设置Knife4j界面的语言
@@ -83,7 +83,7 @@ spring:
     redis: # Redis配置
       host:  159.75.174.133 # Redis服务器主机名
       port: 6379 # Redis服务器端口
-      password: 1234 # Redis服务器密码
+      password: chuangshu # Redis服务器密码
       database: 0 # Redis数据库索引
       lettuce:
         pool: # Lettuce客户端连接池配置
@@ -94,7 +94,7 @@ spring:
   datasource: # 数据源配置
     driver-class-name: com.mysql.cj.jdbc.Driver # JDBC驱动类名
     username: root # 数据库用户名
-    password: 1234 # 数据库密码
+    password: chuangshu # 数据库密码
     url: jdbc:mysql://159.75.174.133:3306/bililike?serverTimezone=UTC&characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true # 数据库连接URL
 
   elasticsearch: # Elasticsearch配置
@@ -102,9 +102,9 @@ spring:
 
   rabbitmq: # RabbitMQ配置
     host: 159.75.174.133 # RabbitMQ服务器主机名
-    port: 15672 # RabbitMQ服务器端口
+    port: 5672 # RabbitMQ服务器端口
     username: root # RabbitMQ服务器用户名
-    password: 1234 # RabbitMQ服务器密码
+    password: chuangshu # RabbitMQ服务器密码
 
   mail: # 邮件服务配置
     default-encoding: UTF-8 # 默认编码
