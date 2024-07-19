@@ -14,10 +14,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>Common</module>
-        <module>User</module>
-        <module>Video</module>
+        <module>Web</module>
         <module>Admin</module>
-        <module>Dynamic</module>
+        <module>PoJo</module>
     </modules>
 
     <properties>

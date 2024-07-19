@@ -7,10 +7,11 @@
     <file url="file://$PROJECT_DIR$/Common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Dynamic/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Dynamic/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/User/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/User/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/PoJo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Video/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Video/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Web/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
