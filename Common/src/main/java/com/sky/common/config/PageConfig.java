@@ -5,24 +5,34 @@ import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerIntercept
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * This class is used to configure the pagination behavior for MyBatis.
+ * It uses the MyBatisPlusInterceptor to add a PaginationInnerInterceptor.
+ * This allows MyBatis to correctly handle pagination of results.
+ */
 @Configuration
 public class PageConfig {
 
     /*
-      3.4.0之前的版本用这个
-      @return
+      This method was used in versions prior to 3.4.0 to configure pagination.
+      It has been commented out as it is no longer needed.
+      @return PaginationInterceptor
      */
-   /* @Bean
+    /* @Bean
     public PaginationInterceptor paginationInterceptor(){
         return  new PaginationInterceptor();
     }*/
 
     /**
-     * 3.4.0之后提供的拦截器的配置方式; PaginationInterceptor 已被废弃
+     * This method is used to configure the MyBatisPlusInterceptor.
+     * It adds a PaginationInnerInterceptor to the MyBatisPlusInterceptor.
+     * This method is used in versions 3.4.0 and later, as the PaginationInterceptor has been deprecated.
+     * @return MybatisPlusInterceptor configured with a PaginationInnerInterceptor
      */
     @Bean
-    public MybatisPlusInterceptor mybatisPlusInterceptor(){
-        MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();
+    public MybatisPlusInterceptor mybatisPlusInterceptor() {
+
+        final MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();
         mybatisPlusInterceptor.addInnerInterceptor(new PaginationInnerInterceptor());
         return mybatisPlusInterceptor;
     }

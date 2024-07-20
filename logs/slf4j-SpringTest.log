@@ -1,0 +1,205 @@
+[2024-07-20 17:42:40.205+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-07-20 17:42:40.250+0800] [main] INFO  com.sky.admin.AdminApplication [50]- Starting AdminApplication using Java 17.0.11 with PID 12712 (C:\lin\git\mini-bilibili\Admin\target\classes started by 78074 in C:\lin\git\mini-bilibili)
+[2024-07-20 17:42:40.251+0800] [main] INFO  com.sky.admin.AdminApplication [660]- The following 1 profile is active: "dev"
+[2024-07-20 17:42:41.434+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-07-20 17:42:41.437+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-07-20 17:42:41.460+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+[2024-07-20 17:42:41.553+0800] [main] WARN  o.m.s.mapper.ClassPathMapperScanner [44]- No MyBatis mapper was found in '[com.sky.admin]' package. Please check your configuration.
+[2024-07-20 17:42:42.366+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8080 (http)
+[2024-07-20 17:42:42.376+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8080"]
+[2024-07-20 17:42:42.378+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-07-20 17:42:42.378+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-07-20 17:42:42.450+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-07-20 17:42:42.451+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 2161 ms
+[2024-07-20 17:42:43.019+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-07-20 17:42:43.663+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-20 17:42:44.732+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-20 17:42:44.994+0800] [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [86]- 
+
+Using generated security password: 4a8bcb29-5c32-4ad9-948f-029074d1371e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-07-20 17:42:45.507+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-07-20 17:42:45.565+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21fa19e4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33a58fcb, org.springframework.security.web.context.SecurityContextHolderFilter@2e60d4f4, org.springframework.security.web.header.HeaderWriterFilter@47bbf44d, org.springframework.web.filter.CorsFilter@36a8ebca, org.springframework.security.web.authentication.logout.LogoutFilter@45f70f68, com.sky.common.filter.TokenAuthenticationFilter@328e687e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45ecdd32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@408980aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@434a72f2, org.springframework.security.web.session.SessionManagementFilter@2370c90, org.springframework.security.web.access.ExceptionTranslationFilter@55465bfc, org.springframework.security.web.access.intercept.AuthorizationFilter@f73a7cf]
+[2024-07-20 17:42:46.339+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8080"]
+[2024-07-20 17:42:46.349+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8080 (http) with context path ''
+[2024-07-20 17:42:46.362+0800] [main] INFO  com.sky.admin.AdminApplication [56]- Started AdminApplication in 6.672 seconds (process running for 7.462)
+[2024-07-20 17:42:46.610+0800] [RMI TCP Connection(3)-192.168.152.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-07-20 17:42:46.610+0800] [RMI TCP Connection(3)-192.168.152.1] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-07-20 17:42:46.610+0800] [RMI TCP Connection(2)-192.168.152.1] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:15672]
+[2024-07-20 17:42:46.612+0800] [RMI TCP Connection(3)-192.168.152.1] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 2 ms
+[2024-07-20 17:42:51.643+0800] [RMI TCP Connection(2)-192.168.152.1] WARN  o.s.b.a.amqp.RabbitHealthIndicator [94]- Rabbit health check failed
+org.springframework.amqp.AmqpIOException: java.io.IOException
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:70)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:606)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:727)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:257)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2249)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2222)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2202)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49)
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.io.IOException: null
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:140)
+	at com.rabbitmq.client.impl.AMQChannel.wrap(AMQChannel.java:136)
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:406)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1251)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1198)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:652)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:621)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:568)
+	... 50 common frames omitted
+Caused by: com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.utility.ValueOrException.getValue(ValueOrException.java:66)
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36)
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:552)
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:336)
+	... 55 common frames omitted
+Caused by: java.io.EOFException: null
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:296)
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:91)
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:199)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:687)
+	... 1 common frames omitted
+[2024-07-20 17:42:51.650+0800] [RMI TCP Connection(2)-192.168.152.1] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-07-20 17:42:51.925+0800] [RMI TCP Connection(2)-192.168.152.1] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50e40741
+[2024-07-20 17:42:51.930+0800] [RMI TCP Connection(2)-192.168.152.1] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-07-20 17:42:51.947+0800] [RMI TCP Connection(2)-192.168.152.1] WARN  o.s.b.a.j.DataSourceHealthIndicator [94]- DataSource health check failed
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:342)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.isConnectionValid(DataSourceHealthIndicator.java:130)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:116)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor21.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:96)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 47 common frames omitted
+[2024-07-20 17:42:52.609+0800] [boundedElastic-1] WARN  o.s.b.a.d.r.RedisReactiveHealthIndicator [92]- Redis health check failed
+org.springframework.data.redis.RedisSystemException: Redisson is shutdown
+	at org.redisson.spring.data.connection.RedissonBaseReactive.lambda$read$5(RedissonBaseReactive.java:95)
+	at reactor.core.publisher.Mono.lambda$onErrorMap$28(Mono.java:3850)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:94)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93)
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191)
+	at org.redisson.reactive.CommandReactiveService.lambda$reactive$1(CommandReactiveService.java:80)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:863)
+	at java.base/java.util.concurrent.CompletableFuture.uniWhenCompleteStage(CompletableFuture.java:887)
+	at java.base/java.util.concurrent.CompletableFuture.whenComplete(CompletableFuture.java:2325)
+	at org.redisson.misc.CompletableFutureWrapper.whenComplete(CompletableFutureWrapper.java:223)
+	at org.redisson.reactive.CommandReactiveService.lambda$reactive$2(CommandReactiveService.java:75)
+	at reactor.core.publisher.FluxCreate$BaseSink.onPushPullRequest(FluxCreate.java:574)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.onRequest(FluxCreate.java:273)
+	at org.redisson.reactive.CommandReactiveService.lambda$reactive$3(CommandReactiveService.java:62)
+	at reactor.core.publisher.FluxCreate.subscribe(FluxCreate.java:97)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxSubscribeOnCallable$CallableSubscribeOnSubscription.run(FluxSubscribeOnCallable.java:252)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:68)
+	at reactor.core.scheduler.SchedulerTask.call(SchedulerTask.java:28)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.redisson.RedissonShutdownException: Redisson is shutdown
+	at org.redisson.command.RedisExecutor.execute(RedisExecutor.java:128)
+	at org.redisson.command.CommandAsyncService.async(CommandAsyncService.java:658)
+	at org.redisson.command.CommandAsyncService.readAsync(CommandAsyncService.java:395)
+	at org.redisson.spring.data.connection.RedissonBaseReactive.lambda$read$4(RedissonBaseReactive.java:93)
+	at org.redisson.reactive.CommandReactiveService.lambda$reactive$2(CommandReactiveService.java:65)
+	... 14 common frames omitted
