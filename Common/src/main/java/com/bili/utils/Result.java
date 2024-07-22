@@ -32,6 +32,13 @@ public class Result {
 
     /**
      * 成功返回结果
+     */
+    public static Result success(){
+        return new Result(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), null);
+    }
+
+    /**
+     * 成功返回结果
      *
      * @param data 获取的数据
      */
