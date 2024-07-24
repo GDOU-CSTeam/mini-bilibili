@@ -1,6 +1,7 @@
 # 配置JWT相关的密钥
 jwt:
-  key: bili
+  key: ${bili.jwt.key} # JWT密钥
+  ttl: ${bili.jwt.ttl} # JWT过期时间
 
 # 配置Knife4j，用于增强Spring Boot API文档的生成和展示
 knife4j:
@@ -13,9 +14,9 @@ knife4j:
     # 是否启用基本认证
     enable: true
     # 用户名
-    username: root
+    username: ${bili.knife4j.basic.username}
     #用户密码
-    password: 1234
+    password: ${bili.knife4j.basic.password}
   # 设置配置，用于配置Knife4j的显示和其他设置
   setting:
     # 设置语言，用于设置Knife4j界面的语言
@@ -79,12 +80,16 @@ snowflake:
 
 # 配置Spring应用的名称和其他相关设置
 spring:
+  profiles:
+    active: dev
+  application:
+    name: bili # 应用名称
   data:
     redis: # Redis配置
-      host:  159.75.174.133 # Redis服务器主机名
-      port: 6379 # Redis服务器端口
-      password: 1234 # Redis服务器密码
-      database: 0 # Redis数据库索引
+      host:  ${bili.redis.host} # Redis服务器主机名
+      port: ${bili.redis.port} # Redis服务器端口
+      password: ${bili.redis.password} # Redis服务器密码
+      database: ${bili.redis.database} # Redis数据库索引
       lettuce:
         pool: # Lettuce客户端连接池配置
           max-active: 32 # 最大活动连接数
@@ -92,25 +97,25 @@ spring:
           min-idle: 8 # 最小空闲连接数
 
   datasource: # 数据源配置
-    driver-class-name: com.mysql.cj.jdbc.Driver # JDBC驱动类名
-    username: root # 数据库用户名
-    password: 1234 # 数据库密码
-    url: jdbc:mysql://159.75.174.133:3306/bililike?serverTimezone=UTC&characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true # 数据库连接URL
+    driver-class-name: ${bili.datasource.driver-class-name} # JDBC驱动类名
+    username: ${bili.datasource.username} # 数据库用户名
+    password: ${bili.datasource.password} # 数据库密码
+    url: jdbc:mysql://${bili.datasource.host}:${bili.datasource.port}/${bili.datasource.database}?serverTimezone=UTC&characterEncoding=UTF-8&useUnicode=true&useSSL=false # 数据库连接URL
 
   elasticsearch: # Elasticsearch配置
-    uris: 159.75.174.133:9200  # Elasticsearch节点URI
+    uris: ${bili.elasticsearch.uris} # Elasticsearch节点URI
 
   rabbitmq: # RabbitMQ配置
-    host: 159.75.174.133 # RabbitMQ服务器主机名
-    port: 15672 # RabbitMQ服务器端口
-    username: root # RabbitMQ服务器用户名
-    password: 1234 # RabbitMQ服务器密码
+    host: ${bili.rabbitmq.host} # RabbitMQ服务器主机名
+    port: ${bili.rabbitmq.port} # RabbitMQ服务器端口
+    username: ${bili.rabbitmq.username} # RabbitMQ服务器用户名
+    password: ${bili.rabbitmq.password} # RabbitMQ服务器密码
 
   mail: # 邮件服务配置
     default-encoding: UTF-8 # 默认编码
-    host: smtp.qq.com # SMTP服务器主机名
-    username: 780748976@qq.com # SMTP服务器用户名
-    password: ojkzgrkhowuwbche # SMTP服务器密码
+    host: ${bili.mail.host} # SMTP服务器主机名
+    username: ${bili.mail.username} # SMTP服务器用户名
+    password: ${bili.mail.password} # SMTP服务器密码
     properties: # 邮件发送属性
       mail:
         smtp:
@@ -126,6 +131,7 @@ spring:
     multipart: # 多部分文件上传配置
       max-file-size: 1024MB # 最大文件大小
 
+
   web: # Web配置
     resources: # 资源处理配置
       static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/,classpath:/public/,classpath:/itstyle/ # 静态资源位置
@@ -139,7 +145,7 @@ springdoc:
   group-configs:
     - group: 'default'
       paths-to-match: '/**'
-      packages-to-scan: com.sky
+      packages-to-scan: com.bili
   # 配置Swagger UI的相关设置
   swagger-ui:
     # 设置操作排序方式为字母顺序
@@ -152,17 +158,17 @@ springdoc:
 # 配置阿里云对象存储（OSS）的访问信息
 oss:
   # OSS Endpoint，用于指定访问的区域节点
-  endpoint: sts.cn-shenzhen.aliyuncs.com
+  endpoint: ${bili.oss.endpoint}
   # AccessKey ID，用于身份验证的密钥ID
-  accessKeyId: LTAI5t8Tn2AZiJSoztBJ2PEe
+  accessKeyId: ${bili.oss.accessKeyId}
   # AccessKey Secret，用于身份验证的密钥Secret
-  accessKeySecret: ooJoKalkuDHyDz3QkdYdSle1n0sCpG
+  accessKeySecret: ${bili.oss.accessKeySecret}
   # 角色ARN，用于指定扮演的角色
-  roleArn: acs:ram::1320082312507942:role/w
+  roleArn: ${bili.oss.roleArn}
   # 角色会话名称，用于标识角色会话的名称
-  roleSessionName: RamOssTest
+  roleSessionName: ${bili.oss.roleSessionName}
   # OSS Endpoint，用于直接访问OSS的节点
-  endpointForOss: oss-cn-shenzhen.aliyuncs.com
+  endpointForOss: ${bili.oss.endpointForOss}
   # 存储桶名称，用于指定要操作的OSS存储桶
-  bucketName: videotest5
+  bucketName: ${bili.oss.bucketName}
 

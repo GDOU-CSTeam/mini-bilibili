@@ -1,0 +1,64 @@
+[2024-07-23 03:14:03.875+0800] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [804]- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h50m44s122ms942µs700ns).
+[2024-07-23 03:14:11.044+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xe54e1422, L:/192.168.71.193:52089 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-07-23 03:14:11.046+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xddc10a9a, L:/192.168.71.193:52091 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-07-23 03:14:11.047+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xaf770d83, L:/192.168.71.193:52123 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-07-23 06:51:09.283+0800] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [804]- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h34m4s343ms491µs400ns).
+[2024-07-23 06:51:11.536+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x8c02e73a, L:/192.168.71.193:52245 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-07-23 07:18:15.357+0800] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [804]- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m36s41ms619µs901ns).
+[2024-07-23 11:06:17.426+0800] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [804]- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h31m78ms409µs801ns).
+[2024-07-23 11:06:46.449+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x9c987012, L:/192.168.71.193:53227 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-07-23 11:06:46.451+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xcf539289, L:/192.168.71.193:53233 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)

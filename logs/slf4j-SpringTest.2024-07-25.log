@@ -1,0 +1,402 @@
+[2024-07-25 22:31:57.532+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-07-25 22:31:57.556+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 19780 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-07-25 22:31:57.557+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-07-25 22:31:58.544+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-07-25 22:31:58.546+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-07-25 22:31:58.562+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+[2024-07-25 22:31:58.935+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-07-25 22:31:58.941+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-07-25 22:31:58.942+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-07-25 22:31:58.942+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-07-25 22:31:58.982+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-07-25 22:31:58.983+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1402 ms
+[2024-07-25 22:31:59.110+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-07-25 22:31:59.399+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 22:32:01.217+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 22:32:02.208+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-07-25 22:32:02.254+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@344769b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34376069, org.springframework.security.web.context.SecurityContextHolderFilter@2e3b4394, org.springframework.security.web.header.HeaderWriterFilter@2f025e9e, org.springframework.web.filter.CorsFilter@9c40f43, org.springframework.security.web.authentication.logout.LogoutFilter@42ea14b8, com.bili.filter.JwtAuthenticationTokenFilter@43ee1cf7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10ffe32f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13868c41, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cac0334, org.springframework.security.web.session.SessionManagementFilter@3ccc4ca0, org.springframework.security.web.access.ExceptionTranslationFilter@1715193f, org.springframework.security.web.access.intercept.AuthorizationFilter@6cb759d5]
+[2024-07-25 22:32:02.615+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-07-25 22:32:02.619+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-07-25 22:32:02.631+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.399 seconds (process running for 5.987)
+[2024-07-25 22:32:02.887+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-07-25 22:32:03.144+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#391b03b:0/SimpleConnection@43381b8e [delegate=amqp://root@159.75.174.133:5672/, localPort=55640]
+[2024-07-25 22:32:03.188+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-07-25 22:32:03.672+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1dde200e
+[2024-07-25 22:32:03.675+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-07-25 22:33:47.291+0800] [http-nio-8081-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-07-25 22:33:47.291+0800] [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-07-25 22:33:47.292+0800] [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 1 ms
+[2024-07-25 22:38:17.996+0800] [http-nio-8081-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver [247]- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+[2024-07-25 22:41:47.437+0800] [http-nio-8081-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.RuntimeException: token非法
+	at com.bili.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:48)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-07-25 22:44:18.355+0800] [http-nio-8081-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver [247]- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+[2024-07-25 22:44:27.649+0800] [http-nio-8081-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver [247]- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+[2024-07-25 22:44:53.507+0800] [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase [179]- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1dde200e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2024-07-25 22:44:58.518+0800] [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase [179]- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4d99adb4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2024-07-25 22:45:03.524+0800] [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase [179]- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@25904d96 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2024-07-25 22:45:08.531+0800] [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase [179]- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3c9eff83 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2024-07-25 22:45:13.541+0800] [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase [179]- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73d78137 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2024-07-25 22:45:17.333+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-07-25 22:45:17.352+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 19804 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-07-25 22:45:17.353+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-07-25 22:45:17.994+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-07-25 22:45:17.995+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-07-25 22:45:18.010+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+[2024-07-25 22:45:18.366+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-07-25 22:45:18.372+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-07-25 22:45:18.373+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-07-25 22:45:18.373+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-07-25 22:45:18.411+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-07-25 22:45:18.412+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1038 ms
+[2024-07-25 22:45:18.528+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-07-25 22:45:19.008+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 22:45:21.575+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 22:45:22.530+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-07-25 22:45:22.573+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5add7380, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e638553, org.springframework.security.web.context.SecurityContextHolderFilter@337e573b, org.springframework.security.web.header.HeaderWriterFilter@12b66c89, org.springframework.web.filter.CorsFilter@1c25385a, org.springframework.security.web.authentication.logout.LogoutFilter@5dd12c19, com.bili.filter.JwtAuthenticationTokenFilter@25dad235, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@145f1f97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58d4fe33, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75d0cac6, org.springframework.security.web.session.SessionManagementFilter@779136bf, org.springframework.security.web.access.ExceptionTranslationFilter@4df13b7e, org.springframework.security.web.access.intercept.AuthorizationFilter@6329a5b9]
+[2024-07-25 22:45:22.924+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-07-25 22:45:22.929+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-07-25 22:45:22.940+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.892 seconds (process running for 6.401)
+[2024-07-25 22:45:23.048+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-07-25 22:45:23.221+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#28f3a218:0/SimpleConnection@6bb9d3fd [delegate=amqp://root@159.75.174.133:5672/, localPort=56318]
+[2024-07-25 22:45:23.305+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-07-25 22:45:23.807+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3aa0be24
+[2024-07-25 22:45:23.816+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-07-25 22:45:41.259+0800] [http-nio-8081-exec-6] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-07-25 22:45:41.259+0800] [http-nio-8081-exec-6] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-07-25 22:45:41.261+0800] [http-nio-8081-exec-6] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 1 ms
+[2024-07-25 22:50:58.512+0800] [http-nio-8081-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver [247]- Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "emai" (class com.bili.dto.ResetPwdByEmailDTO), not marked as ignorable]
+[2024-07-25 22:51:04.734+0800] [http-nio-8081-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver [247]- Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "emai" (class com.bili.dto.ResetPwdByEmailDTO), not marked as ignorable]
+[2024-07-25 22:51:20.182+0800] [http-nio-8081-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver [247]- Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "emai" (class com.bili.dto.ResetPwdByEmailDTO), not marked as ignorable]
+[2024-07-25 22:51:29.216+0800] [http-nio-8081-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver [247]- Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "emai" (class com.bili.dto.ResetPwdByEmailDTO), not marked as ignorable]
+[2024-07-25 22:52:56.218+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-07-25 22:52:56.234+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 8504 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-07-25 22:52:56.234+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-07-25 22:52:56.890+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-07-25 22:52:56.891+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-07-25 22:52:56.906+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+[2024-07-25 22:52:57.236+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-07-25 22:52:57.241+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-07-25 22:52:57.242+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-07-25 22:52:57.242+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-07-25 22:52:57.276+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-07-25 22:52:57.276+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1021 ms
+[2024-07-25 22:52:57.400+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-07-25 22:52:57.649+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 22:52:59.285+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 22:53:00.151+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-07-25 22:53:00.196+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6329a5b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c92a59d, org.springframework.security.web.context.SecurityContextHolderFilter@67d55a46, org.springframework.security.web.header.HeaderWriterFilter@6530a1de, org.springframework.web.filter.CorsFilter@4505015b, org.springframework.security.web.authentication.logout.LogoutFilter@188ab96, com.bili.filter.JwtAuthenticationTokenFilter@79135a38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d982fbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3adb4cc8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49bc1f6c, org.springframework.security.web.session.SessionManagementFilter@70ccb3bf, org.springframework.security.web.access.ExceptionTranslationFilter@3dabdd11, org.springframework.security.web.access.intercept.AuthorizationFilter@6a4d57b7]
+[2024-07-25 22:53:00.544+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-07-25 22:53:00.549+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-07-25 22:53:00.561+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 4.599 seconds (process running for 4.965)
+[2024-07-25 22:53:01.081+0800] [RMI TCP Connection(3)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-07-25 22:53:01.265+0800] [RMI TCP Connection(3)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#4e322108:0/SimpleConnection@2a7576e6 [delegate=amqp://root@159.75.174.133:5672/, localPort=56691]
+[2024-07-25 22:53:01.344+0800] [RMI TCP Connection(3)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-07-25 22:53:01.786+0800] [RMI TCP Connection(3)-192.168.71.193] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bd314e8
+[2024-07-25 22:53:01.792+0800] [RMI TCP Connection(3)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-07-25 22:53:09.436+0800] [http-nio-8081-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-07-25 22:53:09.436+0800] [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-07-25 22:53:09.437+0800] [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 1 ms
+[2024-07-25 22:53:32.510+0800] [http-nio-8081-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver [247]- Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "emai" (class com.bili.dto.ResetPwdByEmailDTO), not marked as ignorable]
+[2024-07-25 23:10:48.716+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-07-25 23:10:48.732+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 4440 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-07-25 23:10:48.733+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-07-25 23:10:49.692+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-07-25 23:10:49.693+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-07-25 23:10:49.710+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+[2024-07-25 23:10:50.091+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-07-25 23:10:50.097+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-07-25 23:10:50.098+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-07-25 23:10:50.098+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-07-25 23:10:50.138+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-07-25 23:10:50.138+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1385 ms
+[2024-07-25 23:10:50.269+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-07-25 23:10:50.538+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 23:10:52.077+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 23:10:53.010+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-07-25 23:10:53.053+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6329a5b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c92a59d, org.springframework.security.web.context.SecurityContextHolderFilter@67d55a46, org.springframework.security.web.header.HeaderWriterFilter@6530a1de, org.springframework.web.filter.CorsFilter@4505015b, org.springframework.security.web.authentication.logout.LogoutFilter@188ab96, com.bili.filter.JwtAuthenticationTokenFilter@79135a38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d982fbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3adb4cc8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49bc1f6c, org.springframework.security.web.session.SessionManagementFilter@70ccb3bf, org.springframework.security.web.access.ExceptionTranslationFilter@3dabdd11, org.springframework.security.web.access.intercept.AuthorizationFilter@6a4d57b7]
+[2024-07-25 23:10:53.396+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-07-25 23:10:53.401+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-07-25 23:10:53.412+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 4.961 seconds (process running for 5.648)
+[2024-07-25 23:10:53.731+0800] [RMI TCP Connection(2)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-07-25 23:10:53.929+0800] [RMI TCP Connection(2)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#4e322108:0/SimpleConnection@16fb34c0 [delegate=amqp://root@159.75.174.133:5672/, localPort=57477]
+[2024-07-25 23:10:54.013+0800] [RMI TCP Connection(2)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-07-25 23:10:54.492+0800] [RMI TCP Connection(2)-192.168.71.193] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12a27d43
+[2024-07-25 23:10:54.506+0800] [RMI TCP Connection(2)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-07-25 23:11:50.514+0800] [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-07-25 23:11:50.515+0800] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-07-25 23:11:50.517+0800] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 2 ms
+[2024-07-25 23:11:58.436+0800] [http-nio-8081-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.RuntimeException: 用户未登录
+	at com.bili.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-07-25 23:12:36.216+0800] [http-nio-8081-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [175]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.RuntimeException: 用户未登录
+	at com.bili.filter.JwtAuthenticationTokenFilter.doFilterInternal(JwtAuthenticationTokenFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-07-25 23:16:57.912+0800] [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase [179]- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@12a27d43 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2024-07-25 23:17:02.914+0800] [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase [179]- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@73fdafe8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2024-07-25 23:17:07.926+0800] [http-nio-8081-exec-2] WARN  com.zaxxer.hikari.pool.PoolBase [179]- HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2607ebd2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2024-07-25 23:17:11.459+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-07-25 23:17:11.479+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 24396 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-07-25 23:17:11.479+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-07-25 23:17:12.096+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-07-25 23:17:12.097+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-07-25 23:17:12.112+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+[2024-07-25 23:17:12.448+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-07-25 23:17:12.453+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-07-25 23:17:12.454+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-07-25 23:17:12.454+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-07-25 23:17:12.487+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-07-25 23:17:12.487+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 983 ms
+[2024-07-25 23:17:12.624+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-07-25 23:17:12.891+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 23:17:14.549+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-07-25 23:17:15.383+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-07-25 23:17:15.427+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@567baa55, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63a9af28, org.springframework.security.web.context.SecurityContextHolderFilter@71c74011, org.springframework.security.web.header.HeaderWriterFilter@ec1b776, org.springframework.web.filter.CorsFilter@105cdf61, org.springframework.security.web.authentication.logout.LogoutFilter@7f5a25e2, com.bili.filter.JwtAuthenticationTokenFilter@29ea5e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62d21afd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ee07d7f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@530bd77b, org.springframework.security.web.session.SessionManagementFilter@145f1f97, org.springframework.security.web.access.ExceptionTranslationFilter@3ccc4ca0, org.springframework.security.web.access.intercept.AuthorizationFilter@1e5190bd]
+[2024-07-25 23:17:15.770+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-07-25 23:17:15.774+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-07-25 23:17:15.785+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 4.597 seconds (process running for 5.125)
+[2024-07-25 23:17:16.303+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-07-25 23:17:16.502+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#360d3f47:0/SimpleConnection@c5f1652 [delegate=amqp://root@159.75.174.133:5672/, localPort=57678]
+[2024-07-25 23:17:16.581+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-07-25 23:17:17.062+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17120dd0
+[2024-07-25 23:17:17.067+0800] [RMI TCP Connection(1)-192.168.71.193] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-07-25 23:17:21.376+0800] [http-nio-8081-exec-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-07-25 23:17:21.376+0800] [http-nio-8081-exec-5] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-07-25 23:17:21.377+0800] [http-nio-8081-exec-5] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 1 ms

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="项目结构修改与代码添加">
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="hygl &lt;3154803225@qq.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="worker04" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2joOUpny70cgGMByj76ZNb5uMw9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.AdminApplication.executor": "Run",
+    "Spring Boot.UserApplication.executor": "Run",
+    "Spring Boot.WebApplication.executor": "Run",
+    "extract.method.default.visibility": "public",
+    "git-widget-placeholder": "W01",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/lin/git/branch/mini-bilibili/PoJo/src/main/java/com/bili/pojo/dto/user",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\pojo\dto\user" />
+      <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\mapper" />
+      <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\dto\user" />
+      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\java\com\bili\controller" />
+      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\java\com\bili\service\impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bili.common.filter.user" />
+      <recent name="com.bili.admin.config" />
+      <recent name="com.bili.config" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="" />
+      <created>1722049983899</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722049983899</updated>
+      <workItem from="1722049984365" duration="9226000" />
+      <workItem from="1722060325628" duration="155000" />
+      <workItem from="1722084680096" duration="3944000" />
+      <workItem from="1722088868403" duration="920000" />
+    </task>
+    <task id="LOCAL-00001" summary="项目结构修改与代码添加">
+      <option name="closed" value="true" />
+      <created>1722089345606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722089345606</updated>
+    </task>
+    <task id="LOCAL-00002" summary="项目结构修改与代码添加">
+      <option name="closed" value="true" />
+      <created>1722089492720</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722089492720</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Project Initialize + Spring Security" />
+    <MESSAGE value="项目结构修改与代码添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目结构修改与代码添加" />
+  </component>
+</project>
