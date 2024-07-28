@@ -1,25 +1,20 @@
 package com.bili.web.service.impl;
 
+import com.aliyuncs.exceptions.ClientException;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.bili.common.utils.JwtUtil;
-import com.bili.common.utils.MailCodeUtil;
-import com.bili.common.utils.RedisCache;
+import com.bili.common.utils.*;
 import com.bili.pojo.constant.user.WebRedisConstants;
 import com.bili.pojo.dto.user.*;
 import com.bili.pojo.entity.user.BUser;
 import com.bili.pojo.entity.user.BUserInfo;
 import com.bili.pojo.mapper.user.BUserInfoMapper;
 import com.bili.pojo.mapper.user.BUserMapper;
-import com.bili.common.utils.Result;
 import com.bili.web.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.annotation.Resource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.time.Duration;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -39,16 +34,24 @@ public class UserServiceImpl implements UserService {
     MailCodeUtil mailCodeUtil;
     @Resource
     BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Resource
+    AliyunOss aliyunOss;
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public Result signIn(Long userId) {
         if(redisCache.getCacheObject(WebRedisConstants.USER_TODAY_SIGN_IN_KEY + userId) != null){
             return Result.failed("今日已签到");
         }
-        LocalDateTime now = LocalDateTime.now();
-        LocalDateTime endOfDay = LocalDateTime.of(now.getYear(), now.getMonth(), now.getDayOfMonth(), 23, 59, 59);
-        Duration duration = Duration.between(now, endOfDay);
-        redisCache.setCacheObject(WebRedisConstants.USER_TODAY_SIGN_IN_KEY + userId, 1, duration.toSeconds(), TimeUnit.SECONDS);
+        LambdaQueryWrapper<BUserInfo> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(BUserInfo::getId, userId)
+                .select(BUserInfo::getId, BUserInfo::getCoins, BUserInfo::getExperience)
+                .last("limit 1");
+        BUserInfo bUserInfo = bUserInfoMapper.selectOne(queryWrapper);
+        bUserInfo.setCoins(bUserInfo.getCoins() + 1)
+                .setExperience(bUserInfo.getExperience() + 10);
+        bUserInfoMapper.updateById(bUserInfo);
+        redisCache.setCacheObject(WebRedisConstants.USER_TODAY_SIGN_IN_KEY + userId, 1);
         return Result.success("签到成功");
     }
 
@@ -137,7 +140,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public Result changePassword(ChangePasswordParam changePasswordParam) {
         LambdaQueryWrapper<BUser> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(BUser::getUsername, changePasswordParam.getUsername());
+        queryWrapper.eq(BUser::getUsername, changePasswordParam.getUsername())
+                .select(BUser::getId, BUser::getPassword)
+                .last("limit 1");
         BUser bUser = bUserMapper.selectOne(queryWrapper);
         if(bUser == null){
             return Result.failed("账号不存在");
@@ -179,20 +184,37 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Result updateNickname(String nickname, Long userId) {
+    public Result updateUserInfo(UpdateUserInfoParam updateUserInfoParam) {
+        if (updateUserInfoParam.getSex() != null && updateUserInfoParam.getSex() != 0 && updateUserInfoParam.getSex() != 1) {
+            return Result.failed("性别参数错误");
+        }
+        if (updateUserInfoParam.getBjCover() != null && aliyunOss.findFile(updateUserInfoParam.getBjCover())){
+            return Result.failed("个人中心背景图未上传");
+        }
+        if (updateUserInfoParam.getAvatar() != null && aliyunOss.findFile(updateUserInfoParam.getAvatar())){
+            return Result.failed("头像未上传");
+        }
+        if (updateUserInfoParam.getNickname() != null && updateUserInfoParam.getNickname().length() > 20){
+            return Result.failed("昵称过长");
+        }
+        if (updateUserInfoParam.getIntro() != null && updateUserInfoParam.getIntro().length() > 255){
+            return Result.failed("简介过长");
+        }
         BUserInfo bUserInfo = new BUserInfo();
-        bUserInfo.setId(userId).setNickname(nickname);
-        return Result.success("修改成功");
+        bUserInfo.setId(updateUserInfoParam.getUserId())
+                .setNickname(updateUserInfoParam.getNickname())
+                .setAvatar(updateUserInfoParam.getAvatar())
+                .setIntro(updateUserInfoParam.getIntro())
+                .setSex(updateUserInfoParam.getSex())
+                .setBjCover(updateUserInfoParam.getBjCover());
+        bUserInfoMapper.updateById(bUserInfo);
+        return Result.success("更新成功");
     }
 
     @Override
-    public Result updateAvatarImg(String avatarImgSrc, Long userId) {
-        return null;
-    }
-
-    @Override
-    public Result getUploadAvatarImgSTS(String fileSuffix) {
-        return null;
+    public Result getImageSts(String suffix) throws ClientException {
+        HashMap<String, Object> stsMap = aliyunOss.getKey(suffix, "image");
+        return Result.success(stsMap);
     }
 
 }

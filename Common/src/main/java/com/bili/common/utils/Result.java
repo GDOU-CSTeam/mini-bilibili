@@ -52,7 +52,7 @@ public class Result {
      * @param message 获取的数据
      */
     public static Result success(String message) {
-        return new Result(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), message);
+        return new Result(ResultCode.SUCCESS.getCode(), message, null);
     }
 
     /**
@@ -119,11 +119,27 @@ public class Result {
         return new Result(ResultCode.UNAUTHORIZED.getCode(), ResultCode.UNAUTHORIZED.getMessage(), data);
     }
 
+    public static Result unauthorized(String message) {
+        return new Result(ResultCode.UNAUTHORIZED.getCode(), message, null);
+    }
+
+    public static Result unauthorized() {
+        return new Result(ResultCode.UNAUTHORIZED.getCode(), ResultCode.UNAUTHORIZED.getMessage(), null);
+    }
+
     /**
      * 未授权返回结果
      */
     public static Result forbidden(Object data) {
         return new Result(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
+    }
+
+    public static Result forbidden() {
+        return new Result(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), null);
+    }
+
+    public static Result forbidden(String message) {
+        return new Result(ResultCode.FORBIDDEN.getCode(), message, null);
     }
 
     public void setCode(long code) {

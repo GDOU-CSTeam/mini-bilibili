@@ -40,4 +40,10 @@ public class ConcernController {
     public Result getConcernList(@ParameterObject @Validated PageSelectWithIdParam pageSelectWithIdParam) {
         return concernService.getConcernList(pageSelectWithIdParam);
     }
+
+    @Operation(summary = "分页获取粉丝列表")
+    @GetMapping("/getFansList")
+    public Result getFansList(@ParameterObject @Validated PageSelectWithIdParam pageSelectWithIdParam) {
+        return concernService.getFansList(pageSelectWithIdParam);
+    }
 }

@@ -1,5 +1,6 @@
 package com.bili.web.service;
 
+import com.aliyuncs.exceptions.ClientException;
 import com.bili.common.utils.Result;
 import com.bili.pojo.dto.user.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -28,9 +29,7 @@ public interface UserService {
 
     Result refreshToken(Long userId);
 
-    Result updateNickname(String nickname, Long userId);
+    Result updateUserInfo(UpdateUserInfoParam updateUserInfoParam);
 
-    Result updateAvatarImg(String avatarImgSrc, Long userId);
-
-    Result getUploadAvatarImgSTS(String fileSuffix);
+    Result getImageSts(String suffix) throws ClientException;
 }

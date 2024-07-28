@@ -1,5 +1,6 @@
 package com.bili.web.controller;
 
+import com.aliyuncs.exceptions.ClientException;
 import com.bili.common.utils.Result;
 import com.bili.web.service.UserService;
 import com.bili.pojo.dto.user.*;
@@ -72,7 +73,7 @@ public class UserController {
 
     @Operation(summary = "修改密码")
     @PutMapping("/change_password")
-    public Result changePassword(@Validated @RequestBody ChangePasswordParam changePasswordParam)  {
+    public Result changePassword(@Validated @RequestBody ChangePasswordParam changePasswordParam) {
         return userService.changePassword(changePasswordParam);
     }
 
@@ -97,23 +98,15 @@ public class UserController {
         return userService.refreshToken(userId);
     }
 
-    @PutMapping("/update_nickname")
-    @Operation(summary = "修改昵称")
-    public Result updateNickname(@NotBlank @RequestParam String nickname) {
-        Long userid = Long.valueOf(SecurityContextHolder.getContext().getAuthentication().getName());
-        return userService.updateNickname(nickname,userid);
+    @PutMapping("/update_user_info")
+    @Operation(summary = "更新用户信息")
+    public Result updateUserInfo(@RequestBody @Validated UpdateUserInfoParam updateUserInfoParam) {
+        return userService.updateUserInfo(updateUserInfoParam);
     }
 
-    @PutMapping("/update_avatar_img")
-    @Operation(summary = "修改头像")
-    public Result updateAvatarImg(@NotBlank @RequestParam String avatarImgSrc) {
-        Long userId = Long.valueOf(SecurityContextHolder.getContext().getAuthentication().getName());
-        return userService.updateAvatarImg(avatarImgSrc,userId);
-    }
-
-    @GetMapping("/get_upload_avatar_imgSTS")
-    @Operation(summary = "获取头像上传凭证")
-    public Result getUploadAvatarImgSTS(@NotBlank @RequestParam String fileSuffix) {
-        return userService.getUploadAvatarImgSTS(fileSuffix);
+    @GetMapping("/get_image_sts")
+    @Operation(summary = "获取图片上传凭证")
+    public Result getImageSts(@RequestParam @NotBlank String suffix) throws ClientException {
+        return userService.getImageSts(suffix);
     }
 }

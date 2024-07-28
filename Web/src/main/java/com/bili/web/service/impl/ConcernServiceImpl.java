@@ -6,6 +6,7 @@ import com.bili.common.dto.PageSelectWithIdParam;
 import com.bili.common.utils.Result;
 import com.bili.pojo.entity.user.BConcern;
 import com.bili.pojo.mapper.user.BConcernMapper;
+import com.bili.pojo.vo.user.UserInfoShowVo;
 import com.bili.web.service.ConcernService;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
@@ -34,10 +35,17 @@ public class ConcernServiceImpl implements ConcernService {
 
     @Override
     public Result getConcernList(PageSelectWithIdParam pageSelectWithIdParam) {
-        Page<BConcern> page = new Page<>(pageSelectWithIdParam.getPage(), pageSelectWithIdParam.getPageSize());
-        LambdaQueryWrapper<BConcern> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(BConcern::getUserId, pageSelectWithIdParam.getSelectId());
-        Page<BConcern> bConcernPage = bConcernMapper.selectPage(page, queryWrapper);
+        Page<UserInfoShowVo> page = new Page<>(pageSelectWithIdParam.getPage(), pageSelectWithIdParam.getPageSize());
+        Page<UserInfoShowVo> bConcernPage = bConcernMapper.selectConcernedByUserId(
+                Long.valueOf(pageSelectWithIdParam.getSelectId()), page);
         return Result.success(bConcernPage);
+    }
+
+    @Override
+    public Result getFansList(PageSelectWithIdParam pageSelectWithIdParam) {
+        Page<UserInfoShowVo> page = new Page<>(pageSelectWithIdParam.getPage(), pageSelectWithIdParam.getPageSize());
+        Page<UserInfoShowVo> bFansPage = bConcernMapper.selectFansByUserId(
+                Long.valueOf(pageSelectWithIdParam.getSelectId()), page);
+        return Result.success(bFansPage);
     }
 }

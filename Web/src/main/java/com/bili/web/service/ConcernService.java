@@ -11,4 +11,6 @@ public interface ConcernService {
     Result cancelConcern(Long userId, Long concernUserId);
 
     Result getConcernList(PageSelectWithIdParam pageSelectWithIdParam);
+
+    Result getFansList(PageSelectWithIdParam pageSelectWithIdParam);
 }

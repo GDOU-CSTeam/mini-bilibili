@@ -1,6 +1,7 @@
 # 配置JWT相关的密钥
 jwt:
   key: ${bili.jwt.key} # JWT密钥
+  ttl: ${bili.jwt.ttl} # JWT过期时间
 
 # 配置Knife4j，用于增强Spring Boot API文档的生成和展示
 knife4j:
@@ -58,7 +59,7 @@ mybatis-plus:
     # 开启下划线到驼峰式命名的自动转换
     map-underscore-to-camel-case: true
   # Mapper接口位置配置
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath*:mapper/*.xml
 
 
 # 配置服务器的相关设置

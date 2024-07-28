@@ -1,5 +1,6 @@
 package com.bili.common.utils;
 
+import cn.hutool.core.lang.UUID;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.aliyuncs.DefaultAcsClient;
@@ -10,7 +11,6 @@ import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -44,12 +44,15 @@ public class AliyunOss {
     }
 
 
-
-    public HashMap<String, Object> getKey(String type,String name,String fileSuffix) throws ClientException {
+    public HashMap<String, Object> getKey(String fileSuffix, String type) throws ClientException {
         // 以下Policy用于限制仅允许使用临时访问凭证向目标存储空间examplebucket下的src目录上传文件。
         // 临时访问凭证最后获得的权限是步骤4设置的角色权限和该Policy设置权限的交集，即仅允许将文件上传至目标存储空间examplebucket下的src目录。
         // 如果policy为空，则用户将获得该角色下所有权限。
+        String name = UUID.randomUUID().toString();
         String fileName = "src/"+ type + "/" + name + "." + fileSuffix;
+        if (findFile(fileName)){
+            return getKey(type,fileSuffix);
+        }
         String policy = "{\n" +
                 "    \"Version\": \"1\", \n" +
                 "    \"Statement\": [\n" +
@@ -66,7 +69,7 @@ public class AliyunOss {
                 "}";
         // 设置临时访问凭证的有效时间为900秒。
         Long durationSeconds = 900L;
-        HashMap<String,Object> map = new HashMap();
+        HashMap<String,Object> map = new HashMap<>();
         map.put("name",fileName);
         // regionId表示RAM的地域ID。以华东1（杭州）地域为例，regionID填写为cn-hangzhou。也可以保留默认值，默认值为空字符串（""）。
         String regionId = "";

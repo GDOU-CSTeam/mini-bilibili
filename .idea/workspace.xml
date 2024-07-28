@@ -5,8 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="项目结构修改与代码添加">
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/UpdateUserInfoParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/user/UserInfoShowVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BConcernMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BConcernMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/ConcernController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/ConcernController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/ConcernService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/ConcernService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ConcernServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ConcernServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.2024-07-20.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +57,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="worker04" />
+        <entry key="$PROJECT_DIR$" value="W01" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,28 +95,30 @@
     &quot;Spring Boot.UserApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.WebApplication.executor&quot;: &quot;Run&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;public&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;W01&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;W02&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/lin/git/branch/mini-bilibili/PoJo/src/main/java/com/bili/pojo/dto/user&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/lin/git/branch/mini-bilibili/Admin/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\lin\git\branch\mini-bilibili\Admin\src\main\resources" />
+      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\resources" />
       <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\pojo\dto\user" />
       <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\mapper" />
       <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\dto\user" />
-      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\java\com\bili\controller" />
-      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\java\com\bili\service\impl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\resources" />
+      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\resources" />
+      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\resources\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bili.common.filter.user" />
@@ -128,7 +145,11 @@
       <workItem from="1722049984365" duration="9226000" />
       <workItem from="1722060325628" duration="155000" />
       <workItem from="1722084680096" duration="3944000" />
-      <workItem from="1722088868403" duration="920000" />
+      <workItem from="1722088868403" duration="1488000" />
+      <workItem from="1722138572067" duration="3338000" />
+      <workItem from="1722145145184" duration="277000" />
+      <workItem from="1722160351557" duration="2711000" />
+      <workItem from="1722174957878" duration="765000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -146,13 +167,52 @@
       <option name="project" value="LOCAL" />
       <updated>1722089492720</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="项目结构修改与代码添加">
+      <option name="closed" value="true" />
+      <created>1722089800483</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1722089800483</updated>
+    </task>
+    <task id="LOCAL-00004" summary="项目结构修改与代码添加">
+      <option name="closed" value="true" />
+      <created>1722090081810</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722090081810</updated>
+    </task>
+    <task id="LOCAL-00005" summary="项目结构修改与代码添加">
+      <option name="closed" value="true" />
+      <created>1722090086059</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722090086059</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
