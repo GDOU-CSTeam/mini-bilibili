@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.*;
  * @since 2024-07-24 05:19:39
  */
 @RestController
-@RequestMapping("/User")
+@RequestMapping("/user")
 @Tag(name = "User", description = "用户信息接口")
 @Validated
 public class UserController {
@@ -101,7 +101,8 @@ public class UserController {
     @PutMapping("/update_user_info")
     @Operation(summary = "更新用户信息")
     public Result updateUserInfo(@RequestBody @Validated UpdateUserInfoParam updateUserInfoParam) {
-        return userService.updateUserInfo(updateUserInfoParam);
+        Long userId = Long.valueOf(SecurityContextHolder.getContext().getAuthentication().getName());
+        return userService.updateUserInfo(userId, updateUserInfoParam);
     }
 
     @GetMapping("/get_image_sts")

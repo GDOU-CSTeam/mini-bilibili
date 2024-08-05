@@ -15,6 +15,9 @@ import jakarta.annotation.Resource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -43,6 +46,9 @@ public class UserServiceImpl implements UserService {
         if(redisCache.getCacheObject(WebRedisConstants.USER_TODAY_SIGN_IN_KEY + userId) != null){
             return Result.failed("今日已签到");
         }
+        //获取现在时间
+        LocalDateTime end = LocalDateTime.now().plusDays(1).withHour(0).withMinute(0).withSecond(0).withNano(0);
+        long seconds = ChronoUnit.SECONDS.between(LocalDateTime.now(),end);
         LambdaQueryWrapper<BUserInfo> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(BUserInfo::getId, userId)
                 .select(BUserInfo::getId, BUserInfo::getCoins, BUserInfo::getExperience)
@@ -51,7 +57,8 @@ public class UserServiceImpl implements UserService {
         bUserInfo.setCoins(bUserInfo.getCoins() + 1)
                 .setExperience(bUserInfo.getExperience() + 10);
         bUserInfoMapper.updateById(bUserInfo);
-        redisCache.setCacheObject(WebRedisConstants.USER_TODAY_SIGN_IN_KEY + userId, 1);
+        redisCache.setCacheObject(WebRedisConstants.USER_TODAY_SIGN_IN_KEY + userId,
+                1 , seconds, TimeUnit.SECONDS);
         return Result.success("签到成功");
     }
 
@@ -73,15 +80,15 @@ public class UserServiceImpl implements UserService {
         if (!bCryptPasswordEncoder.matches(userNameLoginParam.getPassword(), bUser.getPassword())) {
             return Result.failed("用户名或密码错误");
         }
-        return getTokenMap(bUser.getId());
+        return getTokenMap(bUser.getId(), "登录成功");
     }
 
     //获取accessToken和refreshToken
-    public Result getTokenMap(Long userId) {
+    public Result getTokenMap(Long userId, String ResultMessage) {
         HashMap<String, String> tokenMap = new HashMap<>();
         tokenMap.put("accessToken", jwtUtil.createJWT(String.valueOf(userId)));
-        tokenMap.put("refreshToken", jwtUtil.createJWT(String.valueOf(userId), JwtUtil.JWT_TTL*7));
-        return Result.success(tokenMap, "登录成功");
+        tokenMap.put("refreshToken", jwtUtil.createJWT(String.valueOf(userId), jwtUtil.jwtTtl * 7));
+        return Result.success(tokenMap, ResultMessage);
     }
 
     @Override
@@ -96,7 +103,7 @@ public class UserServiceImpl implements UserService {
         if (!bCryptPasswordEncoder.matches(emailLoginParam.getPassword(), bUser.getPassword())) {
             return Result.failed("邮箱或密码错误");
         }
-        return getTokenMap(bUser.getId());
+        return getTokenMap(bUser.getId(), "登录成功");
     }
 
     @Override
@@ -124,16 +131,20 @@ public class UserServiceImpl implements UserService {
         bUserMapper.insert(user);
         BUserInfo bUserInfo = new BUserInfo();
         bUserInfo.setId(user.getId());
+        bUserInfo.setNickname("用户" + user.getId());
+        bUserInfo.setAvatar("image/avatar/default_avatar.jpg");
         bUserInfoMapper.insert(bUserInfo);
         return Result.success("注册成功");
     }
 
     @Override
     public Result getCode(String email) throws JsonProcessingException, InterruptedException {
-        if(bUserMapper.selectOne(new LambdaQueryWrapper<BUser>().eq(BUser::getEmail, email)) != null){
-            return Result.failed("该邮箱已注册");
+        try {
+            mailCodeUtil.sendCode(email);
         }
-        mailCodeUtil.sendCode(email);
+        catch (Exception e){
+            return Result.failed("验证码发送失败");
+        }
         return Result.success("验证码已发送");
     }
 
@@ -149,6 +160,9 @@ public class UserServiceImpl implements UserService {
         }
         if (!bCryptPasswordEncoder.matches(changePasswordParam.getPassword(), bUser.getPassword())) {
             return Result.failed("原密码错误");
+        }
+        if (changePasswordParam.getNewPassword().equals(changePasswordParam.getPassword())) {
+            return Result.failed("新密码不能与原密码相同");
         }
         bUser.setPassword(bCryptPasswordEncoder.encode(changePasswordParam.getNewPassword()));
         bUserMapper.updateById(bUser);
@@ -173,18 +187,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Result quit(Long userId) {
-        redisCache.setCacheObject(WebRedisConstants.USER_LOGIN_BLACKLIST_KEY + userId, 1,
-                WebRedisConstants.USER_LOGIN_BLACKLIST_TTL, TimeUnit.SECONDS);
+        redisCache.setCacheObject(WebRedisConstants.USER_LOGIN_BLACKLIST_KEY + userId, System.currentTimeMillis(),
+                jwtUtil.jwtTtl, TimeUnit.SECONDS);
         return Result.success("退出成功");
     }
 
     @Override
     public Result refreshToken(Long userId) {
-        return getTokenMap(userId);
+        return getTokenMap(userId, null);
     }
 
     @Override
-    public Result updateUserInfo(UpdateUserInfoParam updateUserInfoParam) {
+    public Result updateUserInfo(Long userId, UpdateUserInfoParam updateUserInfoParam) {
         if (updateUserInfoParam.getSex() != null && updateUserInfoParam.getSex() != 0 && updateUserInfoParam.getSex() != 1) {
             return Result.failed("性别参数错误");
         }
@@ -194,14 +208,14 @@ public class UserServiceImpl implements UserService {
         if (updateUserInfoParam.getAvatar() != null && aliyunOss.findFile(updateUserInfoParam.getAvatar())){
             return Result.failed("头像未上传");
         }
-        if (updateUserInfoParam.getNickname() != null && updateUserInfoParam.getNickname().length() > 20){
+        if (updateUserInfoParam.getNickname() != null && updateUserInfoParam.getNickname().length() > 25){
             return Result.failed("昵称过长");
         }
         if (updateUserInfoParam.getIntro() != null && updateUserInfoParam.getIntro().length() > 255){
             return Result.failed("简介过长");
         }
         BUserInfo bUserInfo = new BUserInfo();
-        bUserInfo.setId(updateUserInfoParam.getUserId())
+        bUserInfo.setId(userId)
                 .setNickname(updateUserInfoParam.getNickname())
                 .setAvatar(updateUserInfoParam.getAvatar())
                 .setIntro(updateUserInfoParam.getIntro())

@@ -58,37 +58,33 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
      * @return 认证令牌，如果不存在则返回null
      * @throws ParseException 如果解析JWT令牌出错
      */
-    private UsernamePasswordAuthenticationToken getAuthentication(final HttpServletRequest request) throws Exception {
+    private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request) throws Exception {
         // 从请求头中获取Authorization信息
-        final String token = request.getHeader("Authorization");
+        String token = request.getHeader("Authorization");
         // 如果没有Authorization信息，则返回null
         if (token == null) {
             return null;
         }
-        String userid = null;
+        String userId = null;
         try {
             // 使用JwtToken工具类解析JWT令牌，获取用户ID
-            Claims claims = jwtToken.parseJWT(token);
-            userid = claims.get("userid").toString();
+            userId = (String) jwtToken.getSubject(token);
         } catch (Exception e) {
             // 解析失败，返回null
             return null;
         }
         // 检查用户是否被拉黑
-        final String dateSignString = jwtToken.getSignTime(token);
-        final String dateBlankString =
-                redisCache.getCacheObject(WebRedisConstants.USER_LOGIN_BLACKLIST_KEY + userid);
-        if (dateBlankString != null) {
+        final Long dateBlankTime =
+                redisCache.getCacheObject(WebRedisConstants.USER_LOGIN_BLACKLIST_KEY + userId);
+        if (dateBlankTime != null) {
+            final long dateSignTime = jwtToken.getSignTime(token);
             // 如果用户被拉黑，比较签名时间和拉黑时间，如果签名时间在拉黑时间之前，则返回null
-            final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            final Date dateSign = sdf.parse(dateSignString);
-            final Date dateBlank = sdf.parse(dateBlankString);
-            if (dateSign.before(dateBlank)) {
+            if (dateSignTime <= dateBlankTime) {
                 return null;
             }
         }
         // 创建并返回一个UsernamePasswordAuthenticationToken对象，用于认证
-        return new UsernamePasswordAuthenticationToken(userid, null, null);
+        return new UsernamePasswordAuthenticationToken(userId, null, null);
     }
 }
 

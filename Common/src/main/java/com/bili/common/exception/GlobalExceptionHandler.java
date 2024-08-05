@@ -7,11 +7,11 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import java.util.Arrays;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.Objects;
 
 @Slf4j
-//@RestControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionHandler {
     //处理异常
     @ExceptionHandler(Exception.class)
@@ -37,8 +37,11 @@ public class GlobalExceptionHandler {
             return Result.validateFailed("参数错误");
         }
 
-        log.error(Arrays.toString(e.getStackTrace()));
-        e.getStackTrace();
+        StringBuilder message = new StringBuilder(e.getMessage());
+        for (StackTraceElement stackTraceElement : e.getStackTrace()) {
+            message.append("\n").append(stackTraceElement);
+        }
+        log.error(String.valueOf(message));
         return Result.failed("服务异常，请稍后重试");
     }
 }

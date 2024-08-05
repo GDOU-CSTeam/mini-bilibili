@@ -1,19 +1,24 @@
 package com.bili.test;
 
 import com.bili.common.utils.JwtUtil;
+import com.bili.web.WebApplication;
 import io.jsonwebtoken.Claims;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = WebApplication.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class JwtUtilTest {
 
     @Resource
     JwtUtil jwtUtil;
 
-
     @Test
     public void testJwtPa() throws Exception {
-        String jwt = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIzYWQxZjE0NjRiYTU0NzhkOTU5YTQyYzRiNmQ3MTE3MyIsInN1YiI6IjEiLCJpc3MiOiJiaWxpIiwiaWF0IjoxNzIxNDg4NjkzLCJleHAiOjE3MjE1NzUwOTN9.H8yNBXPGAx7E2cBlKxcAsceuIju981VlC7jPn_zL8pE";
+        String jwt = "eyJhbGciOiJIUzI1NiJ9.eyJzaWduVGltZSI6IjIwMjQtMDgtMDQgMDg6NDc6MzIiLCJleHAiOjE3MjI3MzMwNTd9.L55DYj-X8vVwNKwYCnHbkZWPuva0c0J9NTwk9UBFqmo";
         Claims claims = jwtUtil.parseJWT(jwt);
         System.out.println(claims); //claims = {jti=3ad1f1464ba5478d959a42c4b6d71173, sub=1, iss=bili, iat=1721488693, exp=1721575093}
         // 获取签名时间

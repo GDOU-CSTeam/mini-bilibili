@@ -19,6 +19,17 @@ public class ConcernServiceImpl implements ConcernService {
 
     @Override
     public Result concernUser(Long userId, Long concernUserId) {
+        //判断是否关注自己
+        if (userId.equals(concernUserId)) {
+            return Result.failed("不能关注自己");
+        }
+        //判断是否已经关注
+        LambdaQueryWrapper<BConcern> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(BConcern::getUserId, userId).eq(BConcern::getConcernUserId, concernUserId);
+        BConcern bConcernExist = bConcernMapper.selectOne(queryWrapper);
+        if (bConcernExist != null) {
+            return Result.failed("已关注该用户");
+        }
         BConcern bConcern = new BConcern();
         bConcern.setUserId(userId).setConcernUserId(concernUserId);
         bConcernMapper.insert(bConcern);
@@ -27,7 +38,14 @@ public class ConcernServiceImpl implements ConcernService {
 
     @Override
     public Result cancelConcern(Long userId, Long concernUserId) {
+        //判断是否已关注
         LambdaQueryWrapper<BConcern> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(BConcern::getUserId, userId).eq(BConcern::getConcernUserId, concernUserId);
+        BConcern bConcernExist = bConcernMapper.selectOne(queryWrapper);
+        if (bConcernExist == null) {
+            return Result.failed("未关注该用户");
+        }
+        queryWrapper.clear();
         queryWrapper.eq(BConcern::getUserId, userId).eq(BConcern::getConcernUserId, concernUserId);
         bConcernMapper.delete(queryWrapper);
         return Result.success("取消关注成功");

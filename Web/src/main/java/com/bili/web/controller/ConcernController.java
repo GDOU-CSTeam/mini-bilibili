@@ -13,7 +13,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/Concern")
+@RequestMapping("/concern")
 @Tag(name = "Concern", description = "用户关注接口")
 @Validated
 public class ConcernController {

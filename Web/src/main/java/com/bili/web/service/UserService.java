@@ -29,7 +29,7 @@ public interface UserService {
 
     Result refreshToken(Long userId);
 
-    Result updateUserInfo(UpdateUserInfoParam updateUserInfoParam);
+    Result updateUserInfo(Long userId, UpdateUserInfoParam updateUserInfoParam);
 
     Result getImageSts(String suffix) throws ClientException;
 }

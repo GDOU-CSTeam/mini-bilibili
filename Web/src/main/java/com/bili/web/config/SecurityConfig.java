@@ -3,7 +3,6 @@ package com.bili.web.config;
 import com.bili.common.filter.user.TokenAuthenticationFilter;
 import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -52,9 +51,13 @@ public class SecurityConfig {
                          // 允许访问Swagger的相关URL
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**","/doc.html/**").permitAll()
                         //登出接口要验证
-                        .requestMatchers("/login/logout").authenticated()
+                        .requestMatchers("/user/login/quit").authenticated()
                         //允许访问登录接口
-                        .requestMatchers("/login/**").permitAll()
+                        .requestMatchers("/user/username_login").permitAll()
+                        .requestMatchers("/user/email_login").permitAll()
+                        .requestMatchers("/user/forget_password").permitAll()
+                        .requestMatchers("/user/get_code/**").permitAll()
+                        .requestMatchers("/user/sign").permitAll()
                         .anyRequest().authenticated()
                 )
                 // 配置异常处理

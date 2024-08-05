@@ -7,11 +7,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import java.util.Base64;
 import java.util.Date;
-import java.util.UUID;
+import java.util.HashMap;
 
 /**
  * JWT工具类
@@ -19,12 +16,13 @@ import java.util.UUID;
 @Component
 public class JwtUtil {
 
-    @Value("${jwt.ttl}")
     //有效期为
-    public static Long JWT_TTL;
-    @Value("${jwt.key}")
+    @Value("${jwt.ttl}")
+    public Long jwtTtl;
     //设置秘钥明文
-    public static String JWT_KEY;
+    @Value("${jwt.key}")
+    public String jwtKey;
+
 
     /**
      * 生成jtw
@@ -32,8 +30,8 @@ public class JwtUtil {
      * @return
      */
     public String createJWT(String subject) {
-            JwtBuilder builder = getJwtBuilder(subject, null);// 设置过期时间
-            return builder.compact();
+        JwtBuilder builder = getJwtBuilder(subject,null);// 设置过期时间
+        return builder.compact();
     }
  
     /**
@@ -49,31 +47,21 @@ public class JwtUtil {
  
     private JwtBuilder getJwtBuilder(String subject, Long ttlMillis) {
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
-        SecretKey secretKey = generalKey();
         long nowMillis = System.currentTimeMillis();
-        Date now = new Date(nowMillis);
-        if(ttlMillis == null){
-            ttlMillis = JwtUtil.JWT_TTL;
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("subject", subject);
+        map.put("signTime", nowMillis);
+        if (ttlMillis == null) {
+            ttlMillis = jwtTtl;
         }
-        long expMillis = nowMillis + ttlMillis;
+        long expMillis = nowMillis + ttlMillis * 1000;
         Date expDate = new Date(expMillis);
         return Jwts.builder()
-                .setSubject(subject)   // 主题  可以是JSON数据
-                .setIssuedAt(now)      // 签发时间
-                .signWith(signatureAlgorithm, secretKey) //使用HS256对称加密算法签名, 第二个参数为秘钥
+                .setClaims(map)     // 签发时间
+                .signWith(signatureAlgorithm, jwtKey) //使用HS256对称加密算法签名, 第二个参数为秘钥
                 .setExpiration(expDate);
     }
 
-
-    /**
-     * 生成加密后的秘钥 secretKey
-     * @return
-     */
-    public SecretKey generalKey() {
-        byte[] encodedKey = Base64.getDecoder().decode(JwtUtil.JWT_KEY);
-        SecretKey key = new SecretKeySpec(encodedKey, 0, encodedKey.length, "AES");
-        return key;
-    }
     
     /**
      * 解析
@@ -83,11 +71,16 @@ public class JwtUtil {
      * @throws Exception
      */
     public Claims parseJWT(String jwt) throws Exception {
-        SecretKey secretKey = generalKey();
         return Jwts.parser()
-                .setSigningKey(secretKey)
+                .setSigningKey(jwtKey)
                 .parseClaimsJws(jwt)
                 .getBody();
+    }
+
+    public Object getSubject(String jwt) throws Exception {
+        Claims claims = parseJWT(jwt);
+        // 获取用户信息
+        return claims.get("subject");
     }
 
     /**
@@ -96,10 +89,10 @@ public class JwtUtil {
      * @param jwt 待验证的JWT令牌。
      * @return 令牌中携带的签名时间。
      */
-    public String getSignTime(String jwt) throws Exception {
+    public Long getSignTime(String jwt) throws Exception {
         Claims claims = parseJWT(jwt);
         // 获取签名时间
-        Object iat = claims.get("iat");
-        return iat.toString();
+        Object iat = claims.get("signTime");
+        return (Long) iat;
     }
 }

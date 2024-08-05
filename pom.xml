@@ -64,6 +64,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- Spring Boot的邮件服务启动器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
