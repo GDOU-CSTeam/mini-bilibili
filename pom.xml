@@ -17,6 +17,7 @@
         <module>Web</module>
         <module>Admin</module>
         <module>PoJo</module>
+        <module>Task</module>
     </modules>
 
     <properties>

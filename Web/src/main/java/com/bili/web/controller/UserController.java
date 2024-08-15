@@ -104,10 +104,4 @@ public class UserController {
         Long userId = Long.valueOf(SecurityContextHolder.getContext().getAuthentication().getName());
         return userService.updateUserInfo(userId, updateUserInfoParam);
     }
-
-    @GetMapping("/get_image_sts")
-    @Operation(summary = "获取图片上传凭证")
-    public Result getImageSts(@RequestParam @NotBlank String suffix) throws ClientException {
-        return userService.getImageSts(suffix);
-    }
 }

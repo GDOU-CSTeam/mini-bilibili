@@ -4,29 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="代码功能添加">
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/user/WebImageConstants.java" afterDir="false" />
+    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="登录注册接口完成测试和修改 jwt工具类大改">
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/GetOssStsParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/PublishDynamicParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/user/BDynamic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/user/BDynamicReactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BDynamicMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BDynamicReactionsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task/src/main/java/com/bili/task/CleanOssTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/DynamicController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/OssStsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/bo/PublishDynamicToMq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/config/RabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/consumer/DynamicPublishConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/DynamicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/OssStsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/DynamicServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/OssStsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/MybatisPlusCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/MybatisPlusCodeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/user/TokenAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/user/TokenAuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/user/WebImageConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/user/WebOssConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/user/WebRedisConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/user/WebRedisConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/UpdateUserInfoParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/UpdateUserInfoParam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/ConcernController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/ConcernController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ConcernServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ConcernServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/test/java/com/bili/test/JwtUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/test/JwtUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.2024-07-21.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.2024-07-22.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.2024-07-23.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.2024-07-25.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.2024-07-27.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/com/bili/test/JwtUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/JwtUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/com/bili/test/MySqlTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/com/bili/test/RedisTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -38,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -91,46 +103,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.JwtUtilTest.executor": "Run",
-    "JUnit.JwtUtilTest.testJwtPa.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.AdminApplication.executor": "Run",
-    "Spring Boot.UserApplication.executor": "Run",
-    "Spring Boot.WebApplication.executor": "Run",
-    "extract.method.default.visibility": "public",
-    "git-widget-placeholder": "W02",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/lin/git/mall",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.JwtUtilTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JwtUtilTest.testJwtPa.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AdminApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WebApplication.executor&quot;: &quot;Run&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;public&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;W02&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/lin/git/mall&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.MybatisPlusCodeGenerator.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\pojo\entity\user" />
+      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\java\com\bili\web\controller" />
       <recent name="C:\lin\git\branch\mini-bilibili\Admin\src\main\resources" />
       <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\resources" />
       <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\pojo\dto\user" />
-      <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\mapper" />
-      <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\java\com\bili\dto\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\resources" />
       <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\resources" />
       <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\resources\mapper" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bili.common.filter.user" />
@@ -143,12 +163,12 @@
       <module name="Web" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bili.test.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.bili.test" />
-      <option name="MAIN_CLASS_NAME" value="com.bili.test.JwtUtilTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JwtUtilTest" />
       <option name="METHOD_NAME" value="testJwtPa" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -189,7 +209,14 @@
       <workItem from="1722438081030" duration="63000" />
       <workItem from="1722725238548" duration="5632000" />
       <workItem from="1722731308055" duration="1285000" />
-      <workItem from="1722827516554" duration="3264000" />
+      <workItem from="1722827516554" duration="3745000" />
+      <workItem from="1723033956541" duration="1057000" />
+      <workItem from="1723035029724" duration="6015000" />
+      <workItem from="1723041174708" duration="13000" />
+      <workItem from="1723041727351" duration="808000" />
+      <workItem from="1723362458970" duration="720000" />
+      <workItem from="1723526961940" duration="278000" />
+      <workItem from="1723690184664" duration="2420000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -239,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722175894389</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="登录注册接口完成测试和修改 jwt工具类大改">
+      <option name="closed" value="true" />
+      <created>1722830928078</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722830928078</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +310,11 @@
     <MESSAGE value="Project Initialize + Spring Security" />
     <MESSAGE value="项目结构修改与代码添加" />
     <MESSAGE value="代码功能添加" />
-    <option name="LAST_COMMIT_MESSAGE" value="代码功能添加" />
+    <MESSAGE value="登录注册接口完成测试和修改 jwt工具类大改" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录注册接口完成测试和修改 jwt工具类大改" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

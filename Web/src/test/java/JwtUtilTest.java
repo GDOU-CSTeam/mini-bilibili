@@ -1,5 +1,3 @@
-package com.bili.test;
-
 import com.bili.common.utils.JwtUtil;
 import com.bili.web.WebApplication;
 import io.jsonwebtoken.Claims;

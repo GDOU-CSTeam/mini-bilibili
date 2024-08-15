@@ -3,6 +3,7 @@ package com.bili.web.service.impl;
 import com.aliyuncs.exceptions.ClientException;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.bili.common.utils.*;
+import com.bili.pojo.constant.user.WebOssConstants;
 import com.bili.pojo.constant.user.WebRedisConstants;
 import com.bili.pojo.dto.user.*;
 import com.bili.pojo.entity.user.BUser;
@@ -132,7 +133,7 @@ public class UserServiceImpl implements UserService {
         BUserInfo bUserInfo = new BUserInfo();
         bUserInfo.setId(user.getId());
         bUserInfo.setNickname("用户" + user.getId());
-        bUserInfo.setAvatar("image/avatar/default_avatar.jpg");
+        bUserInfo.setAvatar(WebOssConstants.DEFAULT_USER_AVATAR);
         bUserInfoMapper.insert(bUserInfo);
         return Result.success("注册成功");
     }
@@ -223,12 +224,6 @@ public class UserServiceImpl implements UserService {
                 .setBjCover(updateUserInfoParam.getBjCover());
         bUserInfoMapper.updateById(bUserInfo);
         return Result.success("更新成功");
-    }
-
-    @Override
-    public Result getImageSts(String suffix) throws ClientException {
-        HashMap<String, Object> stsMap = aliyunOss.getKey(suffix, "image");
-        return Result.success(stsMap);
     }
 
 }

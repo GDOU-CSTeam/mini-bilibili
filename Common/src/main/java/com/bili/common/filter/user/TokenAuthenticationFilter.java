@@ -2,7 +2,6 @@ package com.bili.common.filter.user;
 
 import com.bili.common.utils.RedisCache;
 import com.bili.pojo.constant.user.WebRedisConstants;
-import io.jsonwebtoken.Claims;
 import jakarta.annotation.Resource;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -16,9 +15,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import com.bili.common.utils.JwtUtil;
 import java.io.IOException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 // 定义一个组件，用于认证过滤
 @Component

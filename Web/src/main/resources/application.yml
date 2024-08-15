@@ -60,6 +60,11 @@ mybatis-plus:
     map-underscore-to-camel-case: true
   # Mapper接口位置配置
   mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      logic-delete-field: deleted # 全局逻辑删除字段名
+      logic-delete-value: 1 # 逻辑已删除值
+      logic-not-delete-value: 0 # 逻辑未删除值
 
 
 # 配置服务器的相关设置
@@ -110,6 +115,12 @@ spring:
     port: ${bili.rabbitmq.port} # RabbitMQ服务器端口
     username: ${bili.rabbitmq.username} # RabbitMQ服务器用户名
     password: ${bili.rabbitmq.password} # RabbitMQ服务器密码
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 3000
 
   mail: # 邮件服务配置
     default-encoding: UTF-8 # 默认编码
