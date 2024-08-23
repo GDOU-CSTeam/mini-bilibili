@@ -1,6 +1,8 @@
 package com.bili.entity;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.fastjson.annotation.JSONField;
+import com.bili.dto.UserDTO;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,13 +19,16 @@ import java.util.stream.Collectors;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LoginUser implements UserDetails {
 
-    private User user;
+    private UserDTO user;
 
     //储存权限信息
     private List<String> permissions;
 
     public LoginUser(User user, List<String> permissions) {
-        this.user = user;
+        //将用户信息封装为userDto对象
+        UserDTO userDTO = new UserDTO();
+        BeanUtil.copyProperties(user, userDTO);
+        this.user = userDTO;
         this.permissions = permissions;
     }
 

@@ -60,7 +60,6 @@ mybatis-plus:
   # Mapper接口位置配置
   mapper-locations: classpath:mapper/*.xml
 
-
 # 配置服务器的相关设置
 server:
   # 设置服务器监听的端口号
@@ -94,6 +93,7 @@ spring:
           max-active: 32 # 最大活动连接数
           max-idle: 16 # 最大空闲连接数
           min-idle: 8 # 最小空闲连接数
+
 
   datasource: # 数据源配置
     driver-class-name: ${bili.datasource.driver-class-name} # JDBC驱动类名

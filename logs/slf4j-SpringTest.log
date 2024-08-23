@@ -1,0 +1,292 @@
+[2024-08-23 03:02:49.839+0800] [AMQP Connection 159.75.174.133:5672] WARN  c.r.c.impl.ForgivingExceptionHandler [115]- An unexpected connection driver error occurred (Exception message: Connection reset)
+[2024-08-23 03:33:05.181+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xba637e23, L:/192.168.1.13:54314 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 03:33:05.186+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x303c0bf4, L:/192.168.1.13:54320 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 03:33:05.186+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xc9c8c33a, L:/192.168.1.13:54333 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 03:33:34.517+0800] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [804]- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h12m29s158ms212µs300ns).
+[2024-08-23 09:28:06.921+0800] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [804]- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h54m32s404ms393µs600ns).
+[2024-08-23 09:28:11.776+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xa56b10a4, L:/192.168.1.13:54993 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 09:28:11.776+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xab4ce5c3, L:/192.168.1.13:54994 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 09:28:11.776+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x8510e3f7, L:/192.168.1.13:55124 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 09:28:11.776+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x5a75612c, L:/192.168.1.13:55125 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 09:28:11.779+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x9e2be244, L:/192.168.1.13:55140 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 09:28:11.779+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x03b72787, L:/192.168.1.13:55141 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-23 10:03:49.075+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-08-23 10:03:49.094+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 14308 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-08-23 10:03:49.094+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-08-23 10:03:50.450+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-08-23 10:03:50.450+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-08-23 10:03:50.475+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+[2024-08-23 10:03:50.899+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-08-23 10:03:50.899+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:03:50.899+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-08-23 10:03:50.899+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-08-23 10:03:50.962+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-08-23 10:03:50.962+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1845 ms
+[2024-08-23 10:03:51.098+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-08-23 10:03:51.434+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:03:53.002+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:03:54.293+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-08-23 10:03:54.325+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@be186df, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c257c0a, org.springframework.security.web.context.SecurityContextHolderFilter@5a20f793, org.springframework.security.web.header.HeaderWriterFilter@1e37cb10, org.springframework.web.filter.CorsFilter@16269ff4, org.springframework.security.web.authentication.logout.LogoutFilter@6af0407c, com.bili.filter.JwtAuthenticationTokenFilter@47f0e078, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e0139, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e4b9592, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@684bfba9, org.springframework.security.web.session.SessionManagementFilter@1ccce165, org.springframework.security.web.access.ExceptionTranslationFilter@5ae67f05, org.springframework.security.web.access.intercept.AuthorizationFilter@2e590e36]
+[2024-08-23 10:03:54.701+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:03:54.711+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-08-23 10:03:54.717+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.922 seconds (process running for 6.67)
+[2024-08-23 10:03:55.090+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-08-23 10:03:55.337+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#7cab8d52:0/SimpleConnection@4236ab0a [delegate=amqp://root@159.75.174.133:5672/, localPort=50847]
+[2024-08-23 10:03:55.385+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-08-23 10:03:55.891+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@902e524
+[2024-08-23 10:03:55.897+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-08-23 10:04:01.277+0800] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-08-23 10:04:01.277+0800] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-08-23 10:04:01.277+0800] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 0 ms
+[2024-08-23 10:04:01.855+0800] [http-nio-8081-exec-9] INFO  o.s.api.AbstractOpenApiResource [390]- Init duration for springdoc-openapi is: 226 ms
+[2024-08-23 10:07:20.468+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-08-23 10:07:20.471+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 9112 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-08-23 10:07:20.487+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-08-23 10:07:21.173+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-08-23 10:07:21.180+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-08-23 10:07:21.195+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2024-08-23 10:07:21.532+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-08-23 10:07:21.532+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:07:21.532+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-08-23 10:07:21.532+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-08-23 10:07:21.575+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-08-23 10:07:21.575+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1070 ms
+[2024-08-23 10:07:21.702+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-08-23 10:07:21.995+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:07:23.731+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:07:24.904+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-08-23 10:07:24.951+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7528089c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@136690b1, org.springframework.security.web.context.SecurityContextHolderFilter@6672b0ea, org.springframework.security.web.header.HeaderWriterFilter@2d4f1ddd, org.springframework.web.filter.CorsFilter@39007725, org.springframework.security.web.authentication.logout.LogoutFilter@561c031, com.bili.filter.JwtAuthenticationTokenFilter@47f0e078, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@943cf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2926f7bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3eb8057c, org.springframework.security.web.session.SessionManagementFilter@c8ed958, org.springframework.security.web.access.ExceptionTranslationFilter@3ef7fb04, org.springframework.security.web.access.intercept.AuthorizationFilter@71db6703]
+[2024-08-23 10:07:25.311+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:07:25.324+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-08-23 10:07:25.334+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.133 seconds (process running for 5.505)
+[2024-08-23 10:07:25.589+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-08-23 10:07:25.787+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#16e5c19f:0/SimpleConnection@18570c4d [delegate=amqp://root@159.75.174.133:5672/, localPort=50945]
+[2024-08-23 10:07:25.876+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-08-23 10:07:26.274+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21cce342
+[2024-08-23 10:07:26.280+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-08-23 10:07:39.683+0800] [http-nio-8081-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-08-23 10:07:39.683+0800] [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-08-23 10:07:39.683+0800] [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 0 ms
+[2024-08-23 10:07:40.234+0800] [http-nio-8081-exec-5] INFO  o.s.api.AbstractOpenApiResource [390]- Init duration for springdoc-openapi is: 236 ms
+[2024-08-23 10:10:21.610+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-08-23 10:10:21.629+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 21020 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-08-23 10:10:21.629+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-08-23 10:10:22.308+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-08-23 10:10:22.309+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-08-23 10:10:22.329+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+[2024-08-23 10:10:22.667+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-08-23 10:10:22.670+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:10:22.670+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-08-23 10:10:22.675+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-08-23 10:10:22.712+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-08-23 10:10:22.717+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1064 ms
+[2024-08-23 10:10:22.833+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-08-23 10:10:23.148+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:10:24.965+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:10:26.039+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-08-23 10:10:26.081+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@350d9d23, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@530a46f4, org.springframework.security.web.context.SecurityContextHolderFilter@6b6fde93, org.springframework.security.web.header.HeaderWriterFilter@c8ed958, org.springframework.web.filter.CorsFilter@3180131e, org.springframework.security.web.authentication.logout.LogoutFilter@3af6c672, com.bili.filter.JwtAuthenticationTokenFilter@705d914f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@441762b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d2fe68a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62376bdd, org.springframework.security.web.session.SessionManagementFilter@3751baf6, org.springframework.security.web.access.ExceptionTranslationFilter@151f1734, org.springframework.security.web.access.intercept.AuthorizationFilter@684bfba9]
+[2024-08-23 10:10:26.438+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:10:26.438+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-08-23 10:10:26.454+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.155 seconds (process running for 5.649)
+[2024-08-23 10:10:26.902+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-08-23 10:10:27.056+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#4daead88:0/SimpleConnection@2be254e4 [delegate=amqp://root@159.75.174.133:5672/, localPort=51061]
+[2024-08-23 10:10:27.138+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-08-23 10:10:27.560+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d8a33e9
+[2024-08-23 10:10:27.565+0800] [RMI TCP Connection(2)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-08-23 10:12:22.346+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-08-23 10:12:22.365+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 31768 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-08-23 10:12:22.365+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-08-23 10:12:23.036+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-08-23 10:12:23.036+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-08-23 10:12:23.062+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+[2024-08-23 10:12:23.388+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-08-23 10:12:23.388+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:12:23.388+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-08-23 10:12:23.399+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-08-23 10:12:23.446+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-08-23 10:12:23.446+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1058 ms
+[2024-08-23 10:12:23.567+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-08-23 10:12:23.875+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:12:25.692+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:12:26.798+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-08-23 10:12:26.845+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@350d9d23, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@530a46f4, org.springframework.security.web.context.SecurityContextHolderFilter@6b6fde93, org.springframework.security.web.header.HeaderWriterFilter@c8ed958, org.springframework.web.filter.CorsFilter@3180131e, org.springframework.security.web.authentication.logout.LogoutFilter@3af6c672, com.bili.filter.JwtAuthenticationTokenFilter@705d914f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@441762b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d2fe68a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62376bdd, org.springframework.security.web.session.SessionManagementFilter@3751baf6, org.springframework.security.web.access.ExceptionTranslationFilter@151f1734, org.springframework.security.web.access.intercept.AuthorizationFilter@684bfba9]
+[2024-08-23 10:12:27.215+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:12:27.223+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-08-23 10:12:27.232+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.149 seconds (process running for 5.529)
+[2024-08-23 10:12:27.716+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-08-23 10:12:27.876+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#4daead88:0/SimpleConnection@7d222d6b [delegate=amqp://root@159.75.174.133:5672/, localPort=51129]
+[2024-08-23 10:12:27.957+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-08-23 10:12:28.398+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33232200
+[2024-08-23 10:12:28.404+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-08-23 10:12:31.887+0800] [http-nio-8081-exec-6] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-08-23 10:12:31.887+0800] [http-nio-8081-exec-6] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-08-23 10:12:31.887+0800] [http-nio-8081-exec-6] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 0 ms
+[2024-08-23 10:12:32.426+0800] [http-nio-8081-exec-6] INFO  o.s.api.AbstractOpenApiResource [390]- Init duration for springdoc-openapi is: 211 ms
+[2024-08-23 10:26:27.676+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-08-23 10:26:27.697+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 16708 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-08-23 10:26:27.697+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-08-23 10:26:28.374+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-08-23 10:26:28.374+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-08-23 10:26:28.402+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2024-08-23 10:26:28.734+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-08-23 10:26:28.744+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:26:28.744+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-08-23 10:26:28.744+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-08-23 10:26:28.789+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-08-23 10:26:28.789+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1069 ms
+[2024-08-23 10:26:28.911+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-08-23 10:26:29.187+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:26:31.737+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:26:32.832+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-08-23 10:26:32.863+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@474deb4c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ba02f70, org.springframework.security.web.context.SecurityContextHolderFilter@7d0e43d6, org.springframework.security.web.header.HeaderWriterFilter@1e4b9592, org.springframework.web.filter.CorsFilter@2e88ad38, org.springframework.security.web.authentication.logout.LogoutFilter@752e4223, com.bili.filter.JwtAuthenticationTokenFilter@c6bf8d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@757f47f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ff7e353, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2148849f, org.springframework.security.web.session.SessionManagementFilter@5e75cf7a, org.springframework.security.web.access.ExceptionTranslationFilter@211cf27b, org.springframework.security.web.access.intercept.AuthorizationFilter@62376bdd]
+[2024-08-23 10:26:33.217+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:26:33.230+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-08-23 10:26:33.237+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.817 seconds (process running for 6.166)
+[2024-08-23 10:26:33.312+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-08-23 10:26:33.719+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#8942ece:0/SimpleConnection@4a6bbb59 [delegate=amqp://root@159.75.174.133:5672/, localPort=51407]
+[2024-08-23 10:26:33.837+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-08-23 10:26:34.512+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1263b6f7
+[2024-08-23 10:26:34.517+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-08-23 10:26:38.788+0800] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-08-23 10:26:38.788+0800] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-08-23 10:26:38.788+0800] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 0 ms
+[2024-08-23 10:26:39.312+0800] [http-nio-8081-exec-4] INFO  o.s.api.AbstractOpenApiResource [390]- Init duration for springdoc-openapi is: 222 ms
+[2024-08-23 10:35:15.244+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-08-23 10:35:15.260+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 39108 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-08-23 10:35:15.260+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-08-23 10:35:15.964+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-08-23 10:35:15.965+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-08-23 10:35:15.986+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2024-08-23 10:35:16.344+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-08-23 10:35:16.350+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:35:16.351+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-08-23 10:35:16.351+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-08-23 10:35:16.395+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-08-23 10:35:16.395+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1107 ms
+[2024-08-23 10:35:16.521+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-08-23 10:35:16.778+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:35:18.518+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:35:19.689+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-08-23 10:35:19.728+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6859bbd4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a225014, org.springframework.security.web.context.SecurityContextHolderFilter@543c887, org.springframework.security.web.header.HeaderWriterFilter@32d8e58d, org.springframework.web.filter.CorsFilter@7d836c4a, org.springframework.security.web.authentication.logout.LogoutFilter@15ca7322, com.bili.filter.JwtAuthenticationTokenFilter@4682882a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3751baf6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27e656e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@485547ac, org.springframework.security.web.session.SessionManagementFilter@4e0139, org.springframework.security.web.access.ExceptionTranslationFilter@3fb42ec7, org.springframework.security.web.access.intercept.AuthorizationFilter@39007725]
+[2024-08-23 10:35:20.108+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:35:20.113+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-08-23 10:35:20.125+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.158 seconds (process running for 5.546)
+[2024-08-23 10:35:20.301+0800] [RMI TCP Connection(5)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-08-23 10:35:20.455+0800] [RMI TCP Connection(5)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#2ad80cf6:0/SimpleConnection@48a3c685 [delegate=amqp://root@159.75.174.133:5672/, localPort=51613]
+[2024-08-23 10:35:20.535+0800] [RMI TCP Connection(5)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-08-23 10:35:21.059+0800] [RMI TCP Connection(5)-192.168.1.13] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@172b7b4e
+[2024-08-23 10:35:21.065+0800] [RMI TCP Connection(5)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-08-23 10:35:27.560+0800] [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-08-23 10:35:27.560+0800] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-08-23 10:35:27.561+0800] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 1 ms
+[2024-08-23 10:35:28.086+0800] [http-nio-8081-exec-7] INFO  o.s.api.AbstractOpenApiResource [390]- Init duration for springdoc-openapi is: 229 ms
+[2024-08-23 10:51:07.573+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-08-23 10:51:07.588+0800] [main] INFO  com.bili.UserApplication [50]- Starting UserApplication using Java 17.0.8 with PID 5700 (E:\idea_workspace\worker_project\mini-bilibili\Web\target\classes started by 31548 in E:\idea_workspace\worker_project\mini-bilibili)
+[2024-08-23 10:51:07.588+0800] [main] INFO  com.bili.UserApplication [660]- The following 1 profile is active: "dev"
+[2024-08-23 10:51:09.124+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-08-23 10:51:09.124+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-08-23 10:51:09.154+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+[2024-08-23 10:51:09.515+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [109]- Tomcat initialized with port 8081 (http)
+[2024-08-23 10:51:09.515+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Initializing ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:51:09.515+0800] [main] INFO  o.a.catalina.core.StandardService [173]- Starting service [Tomcat]
+[2024-08-23 10:51:09.515+0800] [main] INFO  o.a.catalina.core.StandardEngine [173]- Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-08-23 10:51:09.563+0800] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring embedded WebApplicationContext
+[2024-08-23 10:51:09.563+0800] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext [296]- Root WebApplicationContext: initialization completed in 1950 ms
+[2024-08-23 10:51:09.685+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-08-23 10:51:09.998+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:51:11.619+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-08-23 10:51:12.745+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-08-23 10:51:12.790+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3180131e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62376bdd, org.springframework.security.web.context.SecurityContextHolderFilter@441762b8, org.springframework.security.web.header.HeaderWriterFilter@751b901a, org.springframework.web.filter.CorsFilter@3b8a063d, org.springframework.security.web.authentication.logout.LogoutFilter@497c1d78, com.bili.filter.JwtAuthenticationTokenFilter@705d914f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38213efa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73c1dda3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a36da5e, org.springframework.security.web.session.SessionManagementFilter@3cfab56d, org.springframework.security.web.access.ExceptionTranslationFilter@c8ed958, org.springframework.security.web.access.intercept.AuthorizationFilter@6859bbd4]
+[2024-08-23 10:51:13.126+0800] [main] INFO  o.a.coyote.http11.Http11NioProtocol [173]- Starting ProtocolHandler ["http-nio-8081"]
+[2024-08-23 10:51:13.137+0800] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer [241]- Tomcat started on port 8081 (http) with context path ''
+[2024-08-23 10:51:13.147+0800] [main] INFO  com.bili.UserApplication [56]- Started UserApplication in 5.813 seconds (process running for 6.371)
+[2024-08-23 10:51:13.565+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-08-23 10:51:13.723+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#5b3c11ce:0/SimpleConnection@41e8548b [delegate=amqp://root@159.75.174.133:5672/, localPort=51978]
+[2024-08-23 10:51:13.802+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-08-23 10:51:14.219+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f195a34
+[2024-08-23 10:51:14.229+0800] [RMI TCP Connection(3)-192.168.1.13] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-08-23 10:51:35.062+0800] [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] [173]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-08-23 10:51:35.063+0800] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet [532]- Initializing Servlet 'dispatcherServlet'
+[2024-08-23 10:51:35.064+0800] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet [554]- Completed initialization in 1 ms
+[2024-08-23 10:51:35.612+0800] [http-nio-8081-exec-5] INFO  o.s.api.AbstractOpenApiResource [390]- Init duration for springdoc-openapi is: 219 ms

@@ -1,5 +1,6 @@
-package com.sky.common.utils;
+package com.bili.utils;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 
 /**
@@ -11,7 +12,6 @@ public class Result {
      * 状态码
      */
     private long code;
-
     /**
      * 提示信息
      */
@@ -24,7 +24,7 @@ public class Result {
     protected Result() {
     }
 
-    protected Result(long code, String message, Object data) {
+    public Result(long code, String message, Object data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -39,7 +39,6 @@ public class Result {
 
     /**
      * 成功返回结果
-     *
      * @param data 获取的数据
      */
     public static Result success(Object data) {
@@ -48,7 +47,6 @@ public class Result {
 
     /**
      * 成功返回结果
-     *
      * @param data 获取的数据
      * @param  message 提示信息
      */

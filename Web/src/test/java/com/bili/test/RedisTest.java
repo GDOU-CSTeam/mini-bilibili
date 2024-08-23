@@ -57,6 +57,11 @@ public class RedisTest {
         TestUser user = new TestUser("虎哥", 21);
         redisCache.setCacheObject("user:300",user);
         System.out.println(user);
+        /*{
+            "@type": "com.bili.entity.TestUser",
+                "age": 21,
+                "name": "虎哥"
+        }*/
     }
 
     @Test

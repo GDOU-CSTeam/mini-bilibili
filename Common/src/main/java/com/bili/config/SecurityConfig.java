@@ -49,9 +49,12 @@ public class SecurityConfig{
         http
                 .authorizeHttpRequests((authorize) -> authorize
                          // 允许访问Swagger的相关URL
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**").permitAll()
-                         //允许访问登录接口
-                        .requestMatchers("/user/name_login","/user/phone_login","/login/code","/login/reset_password").permitAll()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**", "/doc.html").permitAll()
+                        //登出接口要验证
+                        .requestMatchers("/login/logout").authenticated()
+                        //允许访问登录接口
+                        .requestMatchers("/login/**").permitAll()
+                        //.requestMatchers("/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 // 配置异常处理

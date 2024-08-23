@@ -3,7 +3,7 @@ package com.bili.dto;
 import lombok.Data;
 
 @Data
-public class ResetPwdDTO {
+public class ResetPwdByPhoneDTO {
 
     private String newPwd;
     private String confirmPwd;

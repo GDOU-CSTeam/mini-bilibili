@@ -1,0 +1,129 @@
+[2024-08-18 02:58:21.866+0800] [AMQP Connection 159.75.174.133:5672] WARN  c.r.c.impl.ForgivingExceptionHandler [115]- An unexpected connection driver error occurred (Exception message: Connection reset)
+[2024-08-18 02:58:21.867+0800] [HikariPool-1 connection adder] ERROR com.zaxxer.hikari.pool.HikariPool [492]- HikariPool-1 - Error thrown while acquiring connection from data source
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 21,597,345 milliseconds ago.  The last packet sent successfully to the server was 21,597,367 milliseconds ago.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1429)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1408)
+	at com.zaxxer.hikari.pool.PoolBase.setupConnection(PoolBase.java:403)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:733)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 21,597,345 milliseconds ago.  The last packet sent successfully to the server was 21,597,367 milliseconds ago.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:562)
+	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:732)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:671)
+	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:132)
+	at com.mysql.cj.NativeSession.sendCommand(NativeSession.java:321)
+	at com.mysql.cj.NativeSession.queryServerVariable(NativeSession.java:1079)
+	at com.mysql.cj.jdbc.ConnectionImpl.isReadOnly(ConnectionImpl.java:1416)
+	... 11 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:323)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at com.mysql.cj.protocol.ReadAheadInputStream.fill(ReadAheadInputStream.java:107)
+	at com.mysql.cj.protocol.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:150)
+	at com.mysql.cj.protocol.ReadAheadInputStream.read(ReadAheadInputStream.java:180)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:64)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
+	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
+	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
+	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
+	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:556)
+	... 17 common frames omitted
+[2024-08-18 02:58:50.380+0800] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [804]- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h27s340ms552µs).
+[2024-08-18 02:58:51.965+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x97b45ee2, L:/192.168.1.12:62493 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-18 10:48:13.147+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x5527ad28, L:/192.168.1.12:63139 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-18 10:48:13.147+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x8d8232e2, L:/192.168.1.12:63246 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-18 10:48:13.147+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x2ccba640, L:/192.168.1.12:63259 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-18 10:48:13.148+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x0d04b71f, L:/192.168.1.12:62774 - R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-18 10:48:13.148+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0xffbeb201, L:/192.168.1.12:62777 ! R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-18 10:48:13.149+0800] [redisson-timer-4-1] ERROR o.r.c.handler.PingConnectionHandler [94]- Unable to send PING command over channel: [id: 0x9069f1bd, L:/192.168.1.12:62831 ! R:159.75.174.133/159.75.174.133:6379]
+org.redisson.client.RedisTimeoutException: Command execution timeout for command: (PING), params: [], Redis client: [addr=redis://159.75.174.133:6379]
+	at org.redisson.client.RedisConnection.lambda$async$0(RedisConnection.java:253)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.run(HashedWheelTimer.java:706)
+	at io.netty.util.concurrent.ImmediateExecutor.execute(ImmediateExecutor.java:34)
+	at io.netty.util.HashedWheelTimer$HashedWheelTimeout.expire(HashedWheelTimer.java:694)
+	at io.netty.util.HashedWheelTimer$HashedWheelBucket.expireTimeouts(HashedWheelTimer.java:781)
+	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:494)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[2024-08-18 10:48:38.291+0800] [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool [804]- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h49m47s911ms425µs600ns).

@@ -25,6 +25,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <version.maven.checkstyle.plugin>3.1.2</version.maven.checkstyle.plugin>
+        <version.maven.checkstyle.plugin>3.1.2</version.maven.checkstyle.plugin>
         <checkstyle.version>8.30</checkstyle.version>
         <checkstyle.suppressions.location>checkstyle-suppressions.xml</checkstyle.suppressions.location>
         <checkstyle.config.location>checkstyle.xml</checkstyle.config.location>

@@ -1,7 +1,11 @@
 package com.bili.utils;
 
+import cn.hutool.core.lang.UUID;
+import com.aliyun.oss.ClientBuilderConfiguration;
+import com.aliyun.oss.ClientConfiguration;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
+import com.aliyun.oss.model.GetObjectRequest;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.auth.sts.AssumeRoleRequest;
 import com.aliyuncs.auth.sts.AssumeRoleResponse;
@@ -13,6 +17,7 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.util.HashMap;
 
 @Component
@@ -39,16 +44,27 @@ public class AliyunOss {
 
     @PostConstruct
     public void init(){
-        ossClient = new OSSClientBuilder().build(endpointForOss,accessKeyId,accessKeySecret);
+        //设置超时机制和重试机制
+        ClientBuilderConfiguration conf = new ClientBuilderConfiguration();
+        conf.setConnectionTimeout(5000);
+        conf.setMaxErrorRetry(3);
+        ossClient = new OSSClientBuilder().build(endpointForOss,accessKeyId,accessKeySecret,conf);
     }
 
+    //根据文件类型和文件后缀生成文件名
+    public String getFileName(String fileSuffix, String type){
+        String name = UUID.randomUUID().toString();
+        return type + "/" + name + "." + fileSuffix;
+    }
 
-
-    public HashMap<String, Object> getKey(String type,String name,String fileSuffix) throws ClientException {
+    public HashMap<String, Object> getKey(String fileSuffix, String type) throws ClientException {
         // 以下Policy用于限制仅允许使用临时访问凭证向目标存储空间examplebucket下的src目录上传文件。
         // 临时访问凭证最后获得的权限是步骤4设置的角色权限和该Policy设置权限的交集，即仅允许将文件上传至目标存储空间examplebucket下的src目录。
         // 如果policy为空，则用户将获得该角色下所有权限。
-        String fileName = "src/"+ type + "/" + name + "." + fileSuffix;
+        String fileName = getFileName(fileSuffix,type);
+        if (findFile(fileName)){
+            return getKey(type,fileSuffix);
+        }
         String policy = "{\n" +
                 "    \"Version\": \"1\", \n" +
                 "    \"Statement\": [\n" +
@@ -65,7 +81,7 @@ public class AliyunOss {
                 "}";
         // 设置临时访问凭证的有效时间为900秒。
         Long durationSeconds = 900L;
-        HashMap<String,Object> map = new HashMap();
+        HashMap<String,Object> map = new HashMap<>();
         map.put("name",fileName);
         // regionId表示RAM的地域ID。以华东1（杭州）地域为例，regionID填写为cn-hangzhou。也可以保留默认值，默认值为空字符串（""）。
         String regionId = "";
@@ -95,8 +111,25 @@ public class AliyunOss {
         return map;
     }
 
+    //判断文件是否存在
     public boolean findFile(String objectName){
         return ossClient.doesObjectExist(bucketName, objectName);
+    }
+
+    //删除文件
+    public void deleteFile(String objectName){
+        ossClient.deleteObject(bucketName, objectName);
+    }
+
+    //上传文件
+    public void uploadFile(String objectName, String filePath){
+        File file = new File(filePath);
+        ossClient.putObject(bucketName, objectName, file);
+    }
+
+    //下载文件
+    public void getObject(String objectName, String filePath){
+        ossClient.getObject(new GetObjectRequest(bucketName, objectName), new File(filePath));
     }
 }
 
