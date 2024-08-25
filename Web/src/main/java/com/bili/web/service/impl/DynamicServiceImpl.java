@@ -1,14 +1,22 @@
 package com.bili.web.service.impl;
 
-import com.bili.common.utils.AliyunOss;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.bili.common.dto.PageSelectParam;
+import com.bili.common.dto.PageSelectWithIdParam;
 import com.bili.common.utils.Result;
-import com.bili.pojo.dto.user.PublishDynamicParam;
-import com.bili.pojo.entity.user.BDynamic;
-import com.bili.pojo.mapper.user.BDynamicMapper;
-import com.bili.pojo.mapper.user.BDynamicReactionsMapper;
+import com.bili.pojo.dto.PublishDynamicParam;
+import com.bili.pojo.entity.BDynamic;
+import com.bili.pojo.mapper.BDynamicMapper;
+import com.bili.pojo.mapper.BDynamicReactionsMapper;
+import com.bili.pojo.mapper.VideosMapper;
+import com.bili.pojo.vo.DynamicShowVo;
+import com.bili.web.mq.bo.MqBaseBo;
 import com.bili.web.mq.bo.PublishDynamicToMq;
 import com.bili.web.mq.config.RabbitConfig;
+import com.bili.web.mq.enums.MqBaseType;
 import com.bili.web.service.DynamicService;
+import com.bili.web.service.OssStsService;
 import com.google.gson.Gson;
 import jakarta.annotation.Resource;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -28,7 +36,9 @@ public class DynamicServiceImpl implements DynamicService {
     @Resource
     Gson gson;
     @Resource
-    AliyunOss aliyunOss;
+    OssStsService ossStsService;
+    @Resource
+    VideosMapper videosMapper;
 
     @Override
     public Result publishToMq(Long userId, PublishDynamicParam publishDynamicParam) {
@@ -53,7 +63,7 @@ public class DynamicServiceImpl implements DynamicService {
             int i = 1;
             for (String image : publishDynamicParam.getImages()) {
                 //检查图片是否存在
-                if (!aliyunOss.findFile(image)) {
+                if (!ossStsService.checkFile(userId, image)) {
                     return Result.failed("第" + i + "张图片不存在");
                 }
                 i++;
@@ -65,12 +75,17 @@ public class DynamicServiceImpl implements DynamicService {
             if (!publishDynamicParam.getVideoId().matches("[0-9]+")) {
                 return Result.failed("视频ID格式错误");
             }
-            //省略
+            if (videosMapper.selectById(Long.valueOf(publishDynamicParam.getVideoId())) == null) {
+                return Result.failed("视频不存在");
+            }
         }
         PublishDynamicToMq publishDynamicToMq = new PublishDynamicToMq();
         publishDynamicToMq.setUserId(userId);
         publishDynamicToMq.setPublishDynamicParam(publishDynamicParam);
-        rabbitTemplate.convertAndSend(RabbitConfig.DYNAMIC_PUBLISH_QUEUE, gson.toJson(publishDynamicToMq));
+        MqBaseBo mqBaseBo = new MqBaseBo();
+        mqBaseBo.setType(MqBaseType.fromValue(MqBaseType.INSERT.getValue()))
+                        .setContent(gson.toJson(publishDynamicToMq));
+        rabbitTemplate.convertAndSend(RabbitConfig.DYNAMIC_QUEUE, gson.toJson(mqBaseBo));
         return Result.success("发布成功");
     }
 
@@ -86,5 +101,32 @@ public class DynamicServiceImpl implements DynamicService {
                         Long.valueOf(publishDynamicToMq.getPublishDynamicParam().getVideoId()))
                 .setCreateTime(LocalDateTime.now());
         dynamicMapper.insert(dynamic);
+    }
+
+    @Override
+    public Result getConcernUserDynamic(Long userId, PageSelectParam pageSelectParam) {
+        Page<DynamicShowVo> page = new Page<>(pageSelectParam.getPage(), pageSelectParam.getPageSize(), false);
+        Page<DynamicShowVo> dynamicShowVoPage = dynamicMapper.selectConcernUserDynamic(userId, page);
+        return Result.success(dynamicShowVoPage.getRecords());
+    }
+
+    @Override
+    public Result getUserDynamic(PageSelectWithIdParam pageSelectWithIdParam) {
+        Page<DynamicShowVo> page = new Page<>(pageSelectWithIdParam.getPage(), pageSelectWithIdParam.getPageSize(),
+                false);
+        Page<DynamicShowVo> dynamicShowVoPage =
+                dynamicMapper.selectUserDynamic(Long.valueOf(pageSelectWithIdParam.getSelectId()), page);
+        return Result.success(dynamicShowVoPage.getRecords());
+    }
+
+    @Override
+    public Result delete(Long userId, Long dynamicId) {
+        LambdaQueryWrapper<BDynamic> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(BDynamic::getUserId, userId).eq(BDynamic::getId, dynamicId);
+        if (dynamicMapper.selectOne(wrapper) != null) {
+            dynamicMapper.deleteById(dynamicId);
+            return Result.success("删除成功");
+        }
+        return Result.failed("动态不存在或不属于你");
     }
 }

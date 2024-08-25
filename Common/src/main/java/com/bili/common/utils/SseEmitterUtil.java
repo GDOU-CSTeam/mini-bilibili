@@ -1,6 +1,5 @@
 package com.bili.common.utils;
 
-
 import lombok.SneakyThrows;
 import org.springframework.http.MediaType;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
@@ -15,7 +14,7 @@ public class SseEmitterUtil {
     //存放用户与SseEmitter的对应关系
     private final static Map<String, SseEmitter> sseEmitterMap = new ConcurrentHashMap<>();
 
-    private static final ConcurrentHashMap<String, Timer> heartPool = new ConcurrentHashMap<>();
+    private final static ConcurrentHashMap<String, Timer> heartPool = new ConcurrentHashMap<>();
 
     public static SseEmitter connect(String userId) {
         // 设置超时时间，0表示不过期。默认30S，超时时间未完成会抛出异常：AsyncRequestTimeoutException
@@ -32,7 +31,11 @@ public class SseEmitterUtil {
     //发送消息
     public static void sendMessage(String userId, String sseMessage) {
         try {
-            sseEmitterMap.get(userId).send(sseMessage);
+            SseEmitter sseEmitter = sseEmitterMap.get(userId);
+            if (sseEmitter == null) {
+                return;
+            }
+            sseEmitter.send(sseMessage);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

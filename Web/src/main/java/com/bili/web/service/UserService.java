@@ -1,32 +1,115 @@
 package com.bili.web.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.bili.common.utils.Result;
-import com.bili.pojo.dto.user.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import org.springframework.stereotype.Service;
+import com.bili.pojo.dto.EditUserInfoDTO;
+import com.bili.pojo.dto.PhoneLoginDTO;
+import com.bili.pojo.dto.ResetPwdByPhoneDTO;
+import com.bili.pojo.entity.User;
 
-@Service
-public interface UserService {
+public interface UserService extends IService<User> {
 
-    Result signIn(Long userId);
+    /**
+     * 验证邮箱验证码
+     * @param email
+     * @param code
+     * @return
+     */
+    Result verifyEmailCode(String email, String code);
 
-    Result getUserInfo(Long userId);
+    /**
+     * 账号密码登录
+     * @param username
+     * @param password
+     * @return
+     */
+    Result nameLogin(String username, String password);
 
-    Result usernameLogin(UserNameLoginParam userNameLoginParam);
+    /**
+     * 短信登录及注册
+     * @param loginDTO
+     * @return
+     */
+    Result phoneLogin(PhoneLoginDTO loginDTO);
 
-    Result emailLogin(EmailLoginParam emailLoginParam);
+    /**
+     * 邮箱登录及注册
+     * @param email
+     * @param code
+     * @return
+     */
+    Result emailLogin(String email, String code);
 
-    Result sign(SignParam signParam);
+    /**
+     * 用户登出
+     * @return
+     */
+    Result logout();
 
-    Result getCode(String email) throws JsonProcessingException, InterruptedException;
+    /**
+     * 发送手机短信验证码
+     * @param phone
+     * @return
+     */
+    Result sendPhoneCode(String phone);
 
-    Result changePassword(ChangePasswordParam changePasswordParam);
 
-    Result forgetPassword(ForgetPassWordParam forgetPassWordParam);
+    /**
+     * 手机验证码重置密码
+     * @param resetPwdDTO
+     * @return
+     */
+    Result resetPwdByPhone(ResetPwdByPhoneDTO resetPwdDTO);
 
-    Result quit(Long userId);
 
-    Result refreshToken(Long userId);
+    /**
+     *  发送邮箱验证码
+     * @param email
+     * @return
+     */
+    Result sendEmailCode(String email);
 
-    Result updateUserInfo(Long userId, UpdateUserInfoParam updateUserInfoParam);
+
+    /**
+     * 邮箱验证码重置密码
+     * @param newPwd
+     * @param confirmPwd
+     * @return
+     */
+    Result resetPwdByEmail(String newPwd, String confirmPwd);
+
+    /**
+     * 签到
+     * @return
+     */
+    Result sign();
+
+    /**
+     * 修改用户简单信息
+     * @param userInfoDTO
+     * @return
+     */
+    Result updateUserInfo(EditUserInfoDTO userInfoDTO);
+
+    /**
+     * 更换新邮箱，绑定邮箱
+     * @param newEmail
+     * @return
+     */
+    Result updateUserEmail(String newEmail);
+
+    /**
+     * 更换新手机号，绑定手机号
+     * @param newPhone
+     * @return
+     */
+    Result updateUserPhone(String newPhone);
+
+    /**
+     * 验证手机验证码
+     * @param phone
+     * @param code
+     * @return
+     */
+    Result verifyPhoneCode(String phone, String code);
 }

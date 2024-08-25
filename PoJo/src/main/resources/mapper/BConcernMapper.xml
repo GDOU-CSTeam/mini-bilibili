@@ -2,31 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.bili.pojo.mapper.user.BConcernMapper">
 
-    <select id="selectConcernedByUserId" resultType="com.bili.pojo.vo.user.UserInfoShowVo">
+    <select id="selectConcernedByUserId" resultType="com.bili.pojo.vo.UserInfoShowVo">
         SELECT
-            ui.id,
-            ui.nickname,
-            ui.avatar,
+            u.id,
+            u.nick_name,
+            u.avatar,
             ui.intro
         FROM
             b_user_info AS ui
                 JOIN
-            b_concern AS u ON u.concern_user_id = ui.id
+            b_concern AS c ON c.concern_user_id = ui.user_id
+                JOIN
+            sys_user AS u ON u.id = ui.user_id
         WHERE
-            u.user_id = #{userId};
+            c.user_id = #{userId};
     </select>
 
-    <select id="selectFansByUserId" resultType="com.bili.pojo.vo.user.UserInfoShowVo">
+    <select id="selectFansByUserId" resultType="com.bili.pojo.vo.UserInfoShowVo">
         SELECT
-            ui.id,
-            ui.nickname,
-            ui.avatar,
+            u.id,
+            u.nick_name,
+            u.avatar,
             ui.intro
         FROM
             b_user_info AS ui
                 JOIN
-            b_concern AS u ON u.user_id = ui.id
+            b_concern AS c ON u.user_id = ui.id
+                JOIN
+            sys_user AS u ON u.id = ui.user_id
         WHERE
-            u.concern_user_id = #{userId};
+            c.concern_user_id = #{userId};
     </select>
 </mapper>

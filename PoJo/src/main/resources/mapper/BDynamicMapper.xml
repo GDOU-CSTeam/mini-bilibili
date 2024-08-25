@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bili.pojo.mapper.user.BDynamicMapper">
+
+    <select id="selectConcernUserDynamic" resultType="com.bili.pojo.vo.DynamicShowVo">
+        SELECT
+            d.id,
+            d.title,
+            d.content,
+            d.images,
+            d.video_id AS videoId,
+            d.likes_count AS likesCount,
+            d.unlikes_count AS unlikesCount,
+            d.comment_count AS commentCount,
+            d.create_time AS createTime,
+            u.id AS userId,
+            u.nick_name,
+            u.avatar
+        FROM b_dynamics d
+                 JOIN sys_user u ON d.user_id = u.id
+        WHERE d.id IN (
+            SELECT concern_user_id FROM b_concern
+            WHERE user_id = #{userId}
+            )
+        ORDER BY d.create_time DESC
+    </select>
+
+    <select id="selectUserDynamic" resultType="com.bili.pojo.vo.DynamicShowVo">
+        SELECT
+            d.id,
+            d.title,
+            d.content,
+            d.images,
+            d.video_id AS videoId,
+            d.likes_count AS likesCount,
+            d.unlikes_count AS unlikesCount,
+            d.comment_count AS commentCount,
+            d.create_time AS createTime,
+            u.id AS userId,
+            u.nick_name,
+            u.avatar
+        FROM b_dynamics d
+                 JOIN b_user u ON d.user_id = u.id
+        WHERE d.id = #{userId}
+        ORDER BY d.create_time DESC
+    </select>
+
+</mapper>

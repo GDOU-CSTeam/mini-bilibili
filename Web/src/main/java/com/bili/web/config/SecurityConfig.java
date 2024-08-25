@@ -1,8 +1,9 @@
 package com.bili.web.config;
 
-import com.bili.common.filter.user.TokenAuthenticationFilter;
+import com.bili.common.filter.JwtAuthenticationTokenFilter;
 import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,6 +19,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+;
+
 @Configuration
 @EnableWebSecurity// 开启网络安全注解
 @RequiredArgsConstructor
@@ -28,8 +31,8 @@ public class SecurityConfig {
     AccessDeniedHandler accessDeniedHandler;
     @Resource
     AuthenticationEntryPoint authenticationEntryPoint;
-    @Resource
-    TokenAuthenticationFilter tokenAuthenticationFilter;
+    @Autowired
+    private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
     //创建BCryptPasswordEncoder注入容器
     @Bean
@@ -49,15 +52,12 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests((authorize) -> authorize
                          // 允许访问Swagger的相关URL
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**","/doc.html/**").permitAll()
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**", "/doc.html").permitAll()
                         //登出接口要验证
-                        .requestMatchers("/user/login/quit").authenticated()
+                        .requestMatchers("/login/logout").authenticated()
                         //允许访问登录接口
-                        .requestMatchers("/user/username_login").permitAll()
-                        .requestMatchers("/user/email_login").permitAll()
-                        .requestMatchers("/user/forget_password").permitAll()
-                        .requestMatchers("/user/get_code/**").permitAll()
-                        .requestMatchers("/user/sign").permitAll()
+                        .requestMatchers("/login/**").permitAll()
+                        //.requestMatchers("/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 // 配置异常处理
@@ -73,7 +73,7 @@ public class SecurityConfig {
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
                 // 在UsernamePasswordAuthenticationFilter之前添加一个过滤器来处理令牌身份验证
-                .addFilterBefore(tokenAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
 
         // 禁用CSRF保护
         http.csrf(AbstractHttpConfigurer::disable);

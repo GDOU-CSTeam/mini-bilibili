@@ -1,7 +1,7 @@
 package com.bili.task;
 
 import com.bili.common.utils.AliyunOss;
-import com.bili.pojo.constant.user.WebRedisConstants;
+import com.bili.pojo.constant.WebRedisConstants;
 import jakarta.annotation.Resource;
 import org.springframework.data.redis.cache.RedisCache;
 import org.springframework.data.redis.core.StringRedisTemplate;

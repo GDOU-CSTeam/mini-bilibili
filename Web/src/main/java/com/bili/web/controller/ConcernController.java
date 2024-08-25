@@ -2,6 +2,7 @@ package com.bili.web.controller;
 
 import com.bili.common.dto.PageSelectWithIdParam;
 import com.bili.common.utils.Result;
+import com.bili.common.utils.UserDTOHolder;
 import com.bili.web.service.ConcernService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/concern")
-@Tag(name = "Concern", description = "用户关注接口")
+@Tag(name = "用户关注接口")
 @Validated
 public class ConcernController {
 
@@ -24,14 +25,14 @@ public class ConcernController {
     @Operation(summary = "关注用户")
     @PostMapping("/concernUser")
     public Result concernUser(@NotBlank @RequestParam Long concernUserId) {
-        Long userId = Long.valueOf(SecurityContextHolder.getContext().getAuthentication().getName());
+        Long userId = UserDTOHolder.getUserDTO().getId();
         return concernService.concernUser(userId, concernUserId);
     }
 
     @Operation(summary = "取消关注")
     @DeleteMapping("/cancelConcern")
     public Result cancelConcern(@NotBlank @RequestParam Long concernUserId) {
-        Long userId = Long.valueOf(SecurityContextHolder.getContext().getAuthentication().getName());
+        Long userId = UserDTOHolder.getUserDTO().getId();
         return concernService.cancelConcern(userId, concernUserId);
     }
 
@@ -45,5 +46,19 @@ public class ConcernController {
     @GetMapping("/getFansList")
     public Result getFansList(@ParameterObject @Validated PageSelectWithIdParam pageSelectWithIdParam) {
         return concernService.getFansList(pageSelectWithIdParam);
+    }
+
+    @Operation(summary = "获取关注状态")
+    @GetMapping("/getConcernStatus")
+    public Result getConcernStatus(@NotBlank @RequestParam Long concernUserId) {
+        Long userId = UserDTOHolder.getUserDTO().getId();
+        return concernService.getConcernStatus(userId, concernUserId);
+    }
+
+    @Operation(summary = "获取共同关注列表")
+    @GetMapping("/getCommonConcernList")
+    public Result getCommonConcernList(@NotBlank @RequestParam Long concernUserId) {
+        Long userId = UserDTOHolder.getUserDTO().getId();
+        return concernService.getCommonConcernList(userId, concernUserId);
     }
 }

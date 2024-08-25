@@ -2,13 +2,13 @@ package com.bili.web.service.impl;
 
 import com.aliyuncs.exceptions.ClientException;
 import com.bili.common.utils.AliyunOss;
-import com.bili.common.utils.RedisCache;
 import com.bili.common.utils.Result;
-import com.bili.pojo.constant.user.WebRedisConstants;
-import com.bili.pojo.dto.user.GetOssStsParam;
+import com.bili.pojo.constant.WebRedisConstants;
+import com.bili.pojo.dto.GetOssStsParam;
 import com.bili.web.service.OssStsService;
 import jakarta.annotation.Resource;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -19,8 +19,6 @@ public class OssStsServiceImpl implements OssStsService {
 
     @Resource
     AliyunOss aliyunOss;
-    @Resource
-    RedisCache redisCache;
     @Resource
     StringRedisTemplate stringRedisTemplate;
 
@@ -41,7 +39,19 @@ public class OssStsServiceImpl implements OssStsService {
     public Result getOssStsVideo(Long userId, String suffix) throws ClientException {
         String fileName = aliyunOss.getFileName(suffix, "video");
         long score = System.currentTimeMillis() + 1000 * 60 * 60;
-        stringRedisTemplate.opsForZSet().add(WebRedisConstants.FILE_UPLOAD_RECORD_KEY, fileName, score);
+        stringRedisTemplate.opsForZSet().add(WebRedisConstants.FILE_UPLOAD_RECORD_KEY, userId + ":" + fileName, score);
         return Result.success(aliyunOss.getKey(fileName));
+    }
+
+    @Override
+    public boolean checkFile(Long userId, String fileName) {
+        ZSetOperations<String, String> zSetOperations = stringRedisTemplate.opsForZSet();
+        Double score = zSetOperations.score(WebRedisConstants.FILE_UPLOAD_RECORD_KEY, userId + ":" + fileName);
+        return score != null;
+    }
+
+    @Override
+    public void FinishFileUpload(Long userId, String fileName) {
+        stringRedisTemplate.opsForZSet().remove(WebRedisConstants.FILE_UPLOAD_RECORD_KEY, userId + ":" + fileName);
     }
 }

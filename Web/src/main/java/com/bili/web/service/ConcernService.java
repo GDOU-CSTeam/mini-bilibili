@@ -13,4 +13,8 @@ public interface ConcernService {
     Result getConcernList(PageSelectWithIdParam pageSelectWithIdParam);
 
     Result getFansList(PageSelectWithIdParam pageSelectWithIdParam);
+
+    Result getConcernStatus(Long userId, Long concernUserId);
+
+    Result getCommonConcernList(Long userId, Long concernUserId);
 }

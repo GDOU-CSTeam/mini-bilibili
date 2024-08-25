@@ -2,7 +2,7 @@ package com.bili.web.controller;
 
 import com.aliyuncs.exceptions.ClientException;
 import com.bili.common.utils.Result;
-import com.bili.pojo.dto.user.GetOssStsParam;
+import com.bili.pojo.dto.GetOssStsParam;
 import com.bili.web.service.OssStsService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/oss_sts")
-@Tag(name = "OssSts", description = "OSS临时授权接口")
+@Tag(name = "OSS临时授权接口")
 @Validated
 public class OssStsController {
 

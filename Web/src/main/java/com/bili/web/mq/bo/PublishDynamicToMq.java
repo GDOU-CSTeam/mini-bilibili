@@ -1,6 +1,6 @@
 package com.bili.web.mq.bo;
 
-import com.bili.pojo.dto.user.PublishDynamicParam;
+import com.bili.pojo.dto.PublishDynamicParam;
 import lombok.Data;
 
 /**

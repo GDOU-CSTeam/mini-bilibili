@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bili.pojo.mapper.VideoMapper">
+
+    <select id="getVideoTags" resultType="java.lang.String">
+        select name from video_tags
+        <where>
+            id in (select tag_id from video_tag_map <where> video_id = #{id}</where>)
+        </where>
+    </select>
+</mapper>

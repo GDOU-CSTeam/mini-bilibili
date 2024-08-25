@@ -1,6 +1,6 @@
 package com.bili.common.utils;
 
-import com.bili.pojo.constant.admin.RedisConstants;
+import com.bili.pojo.constant.RedisConstants;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.annotation.Resource;
 import org.redisson.api.RLock;
