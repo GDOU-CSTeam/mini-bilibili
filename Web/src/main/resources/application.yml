@@ -140,8 +140,8 @@ spring:
 
   servlet: # Servlet配置
     multipart: # 多部分文件上传配置
-      max-file-size: 1024MB # 最大文件大小
-
+      max-file-size: 50MB
+      max-request-size: 50MB
 
   web: # Web配置
     resources: # 资源处理配置
@@ -182,4 +182,13 @@ oss:
   endpointForOss: ${bili.oss.endpointForOss}
   # 存储桶名称，用于指定要操作的OSS存储桶
   bucketName: ${bili.oss.bucketName}
+
+# 配置minio
+minio:
+  endpoint: ${bili.minio.endpoint}
+  accessKey: ${bili.minio.accessKey}
+  secretKey: ${bili.minio.secretKey}
+  bucket:
+    mediafiles: ${bili.minio.bucket.mediafiles}
+    videofiles: ${bili.minio.bucket.videofiles}
 

@@ -2,7 +2,7 @@ package com.bili.web.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bili.pojo.entity.VideoStatus;
-import com.bili.pojo.mapper.VideoStatusMapper;
+import com.bili.web.mapper.VideoStatusMapper;
 import com.bili.web.service.IVideoStatusService;
 import org.springframework.stereotype.Service;
 

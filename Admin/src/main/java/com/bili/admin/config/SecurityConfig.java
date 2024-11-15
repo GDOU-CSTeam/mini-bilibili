@@ -1,6 +1,7 @@
 package com.bili.admin.config;
 
-import com.bili.common.filter.admin.JwtAuthenticationTokenFilter;
+
+import com.bili.common.filter.JwtAuthenticationTokenFilter;
 import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

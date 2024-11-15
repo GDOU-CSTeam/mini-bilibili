@@ -1,10 +1,10 @@
 package com.bili.common.filter;
 
-import com.bili.pojo.constant.RedisConstants;
+
 import com.bili.common.utils.JwtUtil;
 import com.bili.common.utils.RedisCache;
+import com.bili.pojo.constant.RedisConstants;
 import com.bili.pojo.entity.LoginUser;
-import io.jsonwebtoken.Claims;
 import jakarta.annotation.Resource;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -33,11 +33,13 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         //获取token
         String token = request.getHeader("token");
-        if(!StringUtils.hasText(token)){
+        //token为空 或者是登录相关的请求，直接放行
+        if(!StringUtils.hasText(token) || request.getRequestURL().toString().contains("/login")){
             //不携带token放行
             filterChain.doFilter(request,response);
             return;
         }
+
         //解析token
         String userId;
         Integer signTime;

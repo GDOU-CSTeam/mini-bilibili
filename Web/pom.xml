@@ -30,6 +30,11 @@
             <artifactId>PoJo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
+        <!--根据扩展名取mimetype-->
+        <dependency>
+            <groupId>com.j256.simplemagic</groupId>
+            <artifactId>simplemagic</artifactId>
+            <version>1.17</version>
+        </dependency>
     </dependencies>
 </project>

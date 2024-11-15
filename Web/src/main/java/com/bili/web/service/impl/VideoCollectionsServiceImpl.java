@@ -7,7 +7,7 @@ import com.bili.common.utils.Result;
 import com.bili.common.utils.UserDTOHolder;
 import com.bili.pojo.entity.VideoCollections;
 import com.bili.pojo.vo.CollectionVO;
-import com.bili.pojo.mapper.VideoCollectionsMapper;
+import com.bili.web.mapper.VideoCollectionsMapper;
 import com.bili.web.service.IVideoCollectionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;

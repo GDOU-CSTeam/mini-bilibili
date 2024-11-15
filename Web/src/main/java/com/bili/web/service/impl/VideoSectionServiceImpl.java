@@ -2,7 +2,7 @@ package com.bili.web.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bili.pojo.entity.VideoSection;
-import com.bili.pojo.mapper.VideoSectionMapper;
+import com.bili.web.mapper.VideoSectionMapper;
 import com.bili.web.service.IVideoSectionService;
 import org.springframework.stereotype.Service;
 

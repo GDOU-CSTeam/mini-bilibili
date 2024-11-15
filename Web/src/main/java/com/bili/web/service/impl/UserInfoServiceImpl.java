@@ -2,7 +2,7 @@ package com.bili.web.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bili.pojo.entity.UserInfo;
-import com.bili.pojo.mapper.UserInfoMapper;
+import com.bili.web.mapper.UserInfoMapper;
 import com.bili.web.service.IUserInfoService;
 import org.springframework.stereotype.Service;
 

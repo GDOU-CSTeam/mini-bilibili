@@ -11,7 +11,7 @@ import com.bili.common.utils.Result;
 import com.bili.common.utils.UserDTOHolder;
 import com.bili.pojo.entity.VideoComments;
 import com.bili.pojo.vo.VideoCommentVO;
-import com.bili.pojo.mapper.VideoCommentsMapper;
+import com.bili.web.mapper.VideoCommentsMapper;
 import com.bili.web.service.IVideoCommentsService;
 import com.bili.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

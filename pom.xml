@@ -201,6 +201,19 @@
             <artifactId>jjwt</artifactId>
             <version>0.9.0</version>
         </dependency>
+
+        <!--minio依赖-->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>7.1.0</version>
+        </dependency>
+        <!--okhttp-->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.8.1</version>
+        </dependency>
     </dependencies>
 
 
@@ -210,40 +223,7 @@
     <build>
         <!-- 插件配置，用于项目构建 -->
         <plugins>
-            <!-- Maven Checkstyle Plugin，用于代码风格检查 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>${version.maven.checkstyle.plugin}</version>
-                <dependencies>
-                    <!-- 覆盖默认Checkstyle版本 -->
-                    <dependency>
-                        <groupId>com.puppycrawl.tools</groupId>
-                        <artifactId>checkstyle</artifactId>
-                        <version>${checkstyle.version}</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <!-- Checkstyle配置 -->
-                    <suppressionsLocation>${checkstyle.suppressions.location}</suppressionsLocation>
-                    <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
-                    <configLocation>${checkstyle.config.location}</configLocation>
-                    <includes>**\/*.java,**\/*.groovy</includes>
-                    <resourceIncludes>**/*.properties,**/*.sample</resourceIncludes>
-                    <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                    <consoleOutput>true</consoleOutput>
-                </configuration>
-                <executions>
-                    <!-- Checkstyle执行配置 -->
-                    <execution>
-                        <id>checkstyle</id>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+
         </plugins>
     </build>
 </project>

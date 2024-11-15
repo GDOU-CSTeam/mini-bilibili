@@ -5,191 +5,111 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="增加统一的oss管理接口以及垃圾文件清理 增加了动态发布功能">
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/UserDTOHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/RedisConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/WebRedisConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/AddVideoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/EditUserInfoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/EditVideoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/VideoPageQueryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BCollect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BExceptionLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BFeedBack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BImMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BMembership.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BSay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BSeckillVoucher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BTags.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BUserLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BVideo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BVideoTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BVoucher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BVoucherOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/Comments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/RoleMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/ValidGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/VideoCollections.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/VideoComments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/VideoSection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/VideoStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/VideoTagMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/VideoTags.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/VideoType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/Videos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/enums/LikeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/enums/NoticeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BCategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BCollectMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BConcernMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BExceptionLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BFeedBackMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BImMessageMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BMembershipMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BSayMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BSeckillVoucherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BTagsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVideoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVideoTagMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVoucherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVoucherOrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/CommentsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/RoleMenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoCollectionsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoCommentsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoSectionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoStatusMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTagMapMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTagsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideosMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/CollectionVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/DynamicShowVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/MyOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/SseVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/VideoCommentVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/VideoPageVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/VideoVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/BDynamicMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCollectionsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCommentsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoOperationsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoSectionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoStatusMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagMapMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTypeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/UserInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/VideoCollectionsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/VideoCommentsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/VideoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/VideoSectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/VideoStatusController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/VideoTagsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/VideoTypeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/bo/MqBaseBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/enums/MqBaseType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IUserInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IVideoCollectionsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IVideoCommentsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IVideoSectionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IVideoStatusService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IVideoTagMapService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IVideoTagsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IVideoTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/NoticeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/VideoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/NoticeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCollectionsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCommentsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoSectionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoStatusServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagMapServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/MinioConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/BiliLikeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/CommonError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/RestErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/ValidationGroups.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/Mp4VideoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/ProcessUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/VideoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/PageParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/PageResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/MediaProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/MediaProcessHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/BigFilesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaFilesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaOpenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaFilesMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaProcessHistoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaProcessMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/MediaFileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileProcessServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/VideoTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/test/java/FFmpegTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/controller/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/service/LoginService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/service/impl/LoginServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/MybatisPlusCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/MybatisPlusCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/admin/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/user/TokenAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/MailCodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/MailCodeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/PageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/PageInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/SseEmitterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/SseEmitterUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/UserHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/admin/RedisConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/admin/SystemConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/SystemConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/user/WebOssConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/WebOssConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/user/WebRedisConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/admin/EmailLoginDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/admin/NameLoginDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/admin/PhoneLoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/PhoneLoginDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/admin/ResetPwdByEmailDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/admin/ResetPwdByPhoneDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/ResetPwdByPhoneDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/ChangePasswordParam.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/EmailLoginParam.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/ForgetPassWordParam.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/GetOssStsParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/GetOssStsParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/PublishDynamicParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/PublishDynamicParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/SignParam.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/UpdateUserInfoParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/UpdateUserInfoParam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/user/UserNameLoginParam.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/admin/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/admin/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/admin/TestUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/TestUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/admin/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/user/BConcern.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BConcern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/user/BDynamic.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BDynamic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/user/BDynamicReactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BDynamicReactions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/user/BUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/user/BUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/BUserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/admin/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/MenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/admin/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BConcernMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BDynamicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BDynamicMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BDynamicReactionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BDynamicReactionsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BUserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/user/BUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/user/UserInfoShowVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/UserInfoShowVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/BConcernMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/BConcernMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/UserDTOHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/UserDTOHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/bo/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/QueryMediaParamsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/UploadFileParamsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/UploadFileResultDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/enums/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/MediaFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/MediaFileProcessService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BCategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BCollectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BCollectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BConcernMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BConcernMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BDynamicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BDynamicMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BDynamicReactionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BDynamicReactionsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BExceptionLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BExceptionLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BFeedBackMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BFeedBackMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BImMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BImMessageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BMembershipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BMembershipMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BSayMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BSayMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BSeckillVoucherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BSeckillVoucherMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BTagsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BTagsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BUserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BUserLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVideoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BVideoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVideoTagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BVideoTagMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVoucherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BVoucherMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVoucherOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BVoucherOrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/CommentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/CommentsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/RoleMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/RoleMenuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/UserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/UserRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoCollectionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoCollectionsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoCommentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoCommentsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoSectionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoSectionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoStatusMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoStatusMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTagMapMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoTagMapMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTagsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoTagsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideosMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideosMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task/src/main/java/com/bili/task/CleanOssTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task/src/main/java/com/bili/task/CleanOssTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCollectionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCollectionsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCommentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCommentsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoSectionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoSectionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoStatusMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoStatusMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagMapMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagMapMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTypeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/ConcernController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/ConcernController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/DynamicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/DynamicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/OssStsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/OssStsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/bo/PublishDynamicToMq.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/bo/PublishDynamicToMq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/config/RabbitConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/consumer/DynamicPublishConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/consumer/DynamicPublishConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/ConcernService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/ConcernService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/DynamicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/DynamicService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/OssStsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/OssStsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/BigFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/MinioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ConcernServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ConcernServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/DynamicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/DynamicServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/OssStsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/OssStsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCollectionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCollectionsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCommentsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCommentsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoSectionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoSectionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoStatusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoStatusServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagMapServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagMapServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle-suppressions.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,64 +161,62 @@
     <option name="currentCommit" value="1" />
     <option name="onto" value="18e66df8bab66d9ba5d7ff18be03d2bd27469314" />
   </component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\develop\apache-maven-3.6.1\mvn_repo" />
+        <option name="mavenHome" value="D:/develop/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\develop\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2joOUpny70cgGMByj76ZNb5uMw9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JUnit.JwtUtilTest.executor": "Run",
-    "JUnit.JwtUtilTest.testJwtPa.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.AdminApplication.executor": "Run",
-    "Spring Boot.UserApplication.executor": "Run",
-    "Spring Boot.WebApplication.executor": "Run",
-    "extract.method.default.visibility": "public",
-    "git-widget-placeholder": "W02",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/lin/git/branch/w5/mini-bilibili/Common/src/main/java/com/bili/common/utils",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.MybatisPlusCodeGenerator.executor": "Run"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mongo&#10;mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task" />
+  </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\lin\git\branch\w5\mini-bilibili\Common\src\main\java\com\bili\common\utils" />
-      <recent name="C:\lin\git\branch\w5\mini-bilibili\Common\src\main\java\com\bili\common\config" />
-      <recent name="C:\lin\git\branch\w5\mini-bilibili\PoJo\src\main\java\com\bili\pojo\mapper" />
-      <recent name="C:\lin\git\branch\w5\mini-bilibili\PoJo\src\main\java\com\bili\pojo\entity" />
-      <recent name="C:\lin\git\branch\w5\mini-bilibili\PoJo\src\main\java\com\bili\pojo" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\task" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Common\src\main\java\com\bili\common\utils" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\resources\com.bili.web.mapper" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Common\src\main\java\com\bili\common\exception" />
+      <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\java\com\bili\pojo\dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\java\com\bili\pojo\entity" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\mapper" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\service" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\service\impl" />
       <recent name="C:\lin\git\branch\w5\mini-bilibili\PoJo\src\main\resources\mapper" />
-      <recent name="C:\lin\git\branch\mini-bilibili\PoJo\src\main\resources" />
-      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\resources" />
-      <recent name="C:\lin\git\branch\mini-bilibili\Web\src\main\resources\mapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -311,18 +229,66 @@
       <recent name="com.bili.admin.config" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="JwtUtilTest.testJwtPa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Web" />
+  <component name="RunManager" selected="JUnit.FFmpegTest.testSystemClass">
+    <configuration name="ProcessUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bili.common.utils.ProcessUtil" />
+      <module name="Common" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="com.bili.common.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FFmpegTest.testProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Web" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JwtUtilTest" />
-      <option name="METHOD_NAME" value="testJwtPa" />
+      <option name="MAIN_CLASS_NAME" value="FFmpegTest" />
+      <option name="METHOD_NAME" value="testProcess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FFmpegTest.testProcessBuilder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Web" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FFmpegTest" />
+      <option name="METHOD_NAME" value="testProcessBuilder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FFmpegTest.testRuntime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Web" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FFmpegTest" />
+      <option name="METHOD_NAME" value="testRuntime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FFmpegTest.testSystemClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Web" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FFmpegTest" />
+      <option name="METHOD_NAME" value="testSystemClass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -330,7 +296,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JwtUtilTest.testJwtPa" />
+        <item itemvalue="JUnit.FFmpegTest.testSystemClass" />
+        <item itemvalue="JUnit.FFmpegTest.testProcessBuilder" />
+        <item itemvalue="JUnit.FFmpegTest.testRuntime" />
+        <item itemvalue="JUnit.FFmpegTest.testProcess" />
+        <item itemvalue="Application.ProcessUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -383,6 +353,9 @@
       <workItem from="1724571006793" duration="1017000" />
       <workItem from="1724572041888" duration="58000" />
       <workItem from="1724596336153" duration="4411000" />
+      <workItem from="1731554152453" duration="271000" />
+      <workItem from="1731554442907" duration="95000" />
+      <workItem from="1731554623808" duration="33716000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -463,6 +436,15 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="User">
@@ -478,15 +460,7 @@
         </entry>
       </map>
     </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project Initialize + Spring Security" />

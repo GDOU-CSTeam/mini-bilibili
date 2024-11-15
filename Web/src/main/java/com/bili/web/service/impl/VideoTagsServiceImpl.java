@@ -2,7 +2,7 @@ package com.bili.web.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bili.pojo.entity.VideoTags;
-import com.bili.pojo.mapper.VideoTagsMapper;
+import com.bili.web.mapper.VideoTagsMapper;
 import com.bili.web.service.IVideoTagsService;
 import org.springframework.stereotype.Service;
 
