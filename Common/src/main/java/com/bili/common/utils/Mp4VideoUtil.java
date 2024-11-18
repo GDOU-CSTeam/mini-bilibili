@@ -1,5 +1,7 @@
 package com.bili.common.utils;
 
+import org.springframework.aop.scope.ScopedProxyUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,10 +9,10 @@ import java.util.List;
 
 public class Mp4VideoUtil extends VideoUtil {
 
-    String ffmpeg_path = "D:\\Program Files\\ffmpeg-20180227-fa0c9d6-win64-static\\bin\\ffmpeg.exe";//ffmpeg的安装位置
-    String video_path = "D:\\BaiduNetdiskDownload\\test1.avi";
-    String mp4_name = "test1.mp4";
-    String mp4folder_path = "D:/BaiduNetdiskDownload/Movies/test1/";
+    String ffmpeg_path;//ffmpeg的安装位置
+    String video_path;
+    String mp4_name;
+    String mp4folder_path;
     public Mp4VideoUtil(String ffmpeg_path, String video_path, String mp4_name, String mp4folder_path){
         super(ffmpeg_path);
         this.ffmpeg_path = ffmpeg_path;
@@ -38,10 +40,8 @@ public class Mp4VideoUtil extends VideoUtil {
         ffmpeg.exe -i  lucene.avi -c:v libx264 -s 1280x720 -pix_fmt yuv420p -b:a 63k -b:v 753k -r 18 .\lucene.mp4
          */
         List<String> commend = new ArrayList<>();
-        //commend.add("D:\\Program Files\\ffmpeg-20180227-fa0c9d6-win64-static\\bin\\ffmpeg.exe");
         commend.add(ffmpeg_path);
         commend.add("-i");
-//        commend.add("D:\\BaiduNetdiskDownload\\test1.avi");
         commend.add(video_path);
         commend.add("-c:v");
         commend.add("libx264");
@@ -56,8 +56,7 @@ public class Mp4VideoUtil extends VideoUtil {
         commend.add("753k");
         commend.add("-r");
         commend.add("18");
-//        commend.add(mp4folder_path  + mp4_name );
-        commend.add(mp4folder_path  );
+        commend.add(mp4folder_path);
         String outstring = null;
         try {
             ProcessBuilder builder = new ProcessBuilder();
@@ -72,7 +71,6 @@ public class Mp4VideoUtil extends VideoUtil {
             ex.printStackTrace();
 
         }
-//        Boolean check_video_time = this.check_video_time(video_path, mp4folder_path + mp4_name);
         Boolean check_video_time = this.check_video_time(video_path, mp4folder_path);
         if(!check_video_time){
             return outstring;
@@ -84,23 +82,30 @@ public class Mp4VideoUtil extends VideoUtil {
     public static void main(String[] args) throws IOException {
 
 //        ProcessBuilder builder = new ProcessBuilder();
-//        builder.command("D:\\Program Files\\EditPlus\\EditPlus.exe");
+//        builder.command("D:/Program Files/EditPlus/EditPlus.exe");
 //        //将标准输入流和错误输入流合并，通过标准输入流程读取信息
 //        builder.redirectErrorStream(true);
 //        Process p = builder.start();
 
         //ffmpeg的路径
-        String ffmpeg_path = "D:\\soft\\ffmpeg\\ffmpeg.exe";//ffmpeg的安装位置
+        String ffmpeg_path = "D:\\develop\\ffmpeg-6.0-essentials_build\\bin\\ffmpeg.exe";//ffmpeg的安装位置
         //源avi视频的路径
-        String video_path = "D:\\develop\\upload\\02-概述-分库分表是什么.avi";
+        String video_path = "E:\\Download\\FileSamples\\AVI\\sample_1280x720.avi";
         //转换后mp4文件的名称
-        String mp4_name = "02-概述-分库分表是什么.mp4";
+        File mp4_file = File.createTempFile("minio", ".merge");
+        String mp4_name = mp4_file.getName();
         //转换后mp4文件的路径
-        String mp4_path = "D:\\develop\\upload\\02-概述-分库分表是什么.mp4";
+        String mp4_path = mp4_file.getParent();
+
         //创建工具类对象
         Mp4VideoUtil videoUtil = new Mp4VideoUtil(ffmpeg_path,video_path,mp4_name,mp4_path);
         //开始视频转换，成功将返回success
         String s = videoUtil.generateMp4();
+
+
+        System.out.println(mp4_path);
+        System.out.println(mp4_name);
+        System.out.println(mp4_file);
         System.out.println(s);
     }
 }

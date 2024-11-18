@@ -25,10 +25,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity(securedEnabled = true)
 public class SecurityConfig {
 
-    @Resource
-    AccessDeniedHandler accessDeniedHandler;
-    @Resource
-    AuthenticationEntryPoint authenticationEntryPoint;
+    @Autowired
+    private AccessDeniedHandler accessDeniedHandler;
+    @Autowired
+    private AuthenticationEntryPoint authenticationEntryPoint;
     @Autowired
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
 
@@ -49,10 +49,10 @@ public class SecurityConfig {
         // 配置请求授权规则
         http
                 .authorizeHttpRequests((authorize) -> authorize
-                        // 允许访问Swagger的相关URL
-                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**", "/doc.html").permitAll()
                         // 登录接口允许匿名访问
                         .requestMatchers("/login/**").permitAll()
+                        // 允许访问Swagger的相关URL
+                        .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**", "/doc.html").permitAll()
                         // 登出接口要验证
                         .requestMatchers("/login/logout").authenticated()
                         // 其他所有请求都需要认证

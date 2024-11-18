@@ -25,9 +25,9 @@ import java.util.concurrent.TimeUnit;
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 
     @Autowired
-    public RedisCache redisCache;
-    @Resource
-    JwtUtil jwtUtil;
+    private RedisCache redisCache;
+    @Autowired
+    private JwtUtil jwtUtil;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {

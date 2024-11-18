@@ -1,3 +1,13 @@
+# 配置服务器的相关设置
+server:
+  # 设置服务器监听的端口号
+  port: 8081
+  # 配置Servlet相关的设置
+  servlet:
+    # 设置会话的超时时间，单位为秒
+    session:
+      timeout: 1800
+
 # 配置JWT相关的密钥
 jwt:
   key: ${bili.jwt.key} # JWT密钥
@@ -67,15 +77,6 @@ mybatis-plus:
       logic-not-delete-value: 0 # 逻辑未删除值
 
 
-# 配置服务器的相关设置
-server:
-  # 设置服务器监听的端口号
-  port: 8081
-  # 配置Servlet相关的设置
-  servlet:
-    # 设置会话的超时时间，单位为秒
-    session:
-      timeout: 1800
 
 
 # 配置Snowflake算法的相关参数，用于生成分布式ID
@@ -192,3 +193,26 @@ minio:
     mediafiles: ${bili.minio.bucket.mediafiles}
     videofiles: ${bili.minio.bucket.videofiles}
 
+# 配置ffmpeg
+videoprocess:
+  ffmpegpath: D:\develop\ffmpeg-6.0-essentials_build\bin\ffmpeg.exe
+
+
+# 文本审核服务配置
+moderation:
+  # 阿里云访问密钥ID
+  access-key-id: LTAI5tE3WDvmyNw6swWZKsn8
+  # 阿里云访问密钥密码
+  access-key-secret: Ip4rBLaS8PtDT3eBHhuZ5Yy9yKNTC6
+  # 区域ID，表示文本审核服务所在的地域
+  region-id: cn-shenzhen
+  # 服务接入点
+  endpoint: green-cip.cn-shenzhen.aliyuncs.com
+  # 读取超时时间，单位为毫秒
+  read-timeout: 6000
+  # 连接超时时间，单位为毫秒
+  connect-timeout: 3000
+  # 运行时读取超时时间，单位为毫秒
+  runtime-read-timeout: 10000
+  # 运行时连接超时时间，单位为毫秒
+  runtime-connect-timeout: 10000

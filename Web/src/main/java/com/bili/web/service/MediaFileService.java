@@ -1,12 +1,15 @@
 package com.bili.web.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.bili.pojo.dto.*;
 import com.bili.pojo.entity.MediaFiles;
+import com.bili.pojo.entity.MediaProcess;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
-public interface MediaFileService {
+public interface MediaFileService extends IService<MediaFiles> {
 
     /**
      * @param pageParams          分页参数
@@ -91,7 +94,7 @@ public interface MediaFileService {
      * @param bucket        上传到的桶
      * @param objectName    上传到的objectName
      */
-    void addMediaFilesToMinIO(String filePath, String bucket, String objectName);
+    Boolean addMediaFilesToMinIO(String filePath, String bucket, String objectName);
 
     /**
      * 根据文件md5，生成在minio中的文件路径
@@ -100,4 +103,12 @@ public interface MediaFileService {
      * @return
      */
     String getFilePathByMd5(String fileMd5, String extension);
+
+    /**
+     * 获取待审核视频
+     * @param count 要获取的数量
+     * @return
+     */
+    List<MediaFiles> getMediaToBeModerationList(int count);
+
 }

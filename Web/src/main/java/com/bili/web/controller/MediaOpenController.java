@@ -1,6 +1,7 @@
 package com.bili.web.controller;
 
 import cn.hutool.core.util.StrUtil;
+import com.bili.common.utils.MediaUtil;
 import com.bili.common.utils.Result;
 import com.bili.pojo.entity.MediaFiles;
 import com.bili.web.service.MediaFileService;
@@ -8,6 +9,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +23,9 @@ public class MediaOpenController {
 
     @Autowired
     private MediaFileService mediaFileService;
+
+    @Autowired
+    private MediaUtil mediaUtil;
 
     @Operation(summary = "预览文件")
     @GetMapping("/preview/{mediaId}")
@@ -36,6 +41,8 @@ public class MediaOpenController {
         if (StrUtil.isEmpty(url)) {
             return Result.failed("该资源暂不支持访问");
         }
-        return Result.success(mediaFiles.getUrl());
+
+        String totalUrl = mediaUtil.getTotalUrl(mediaFiles.getUrl());
+        return Result.success(totalUrl);
     }
 }

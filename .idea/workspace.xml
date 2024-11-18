@@ -3,111 +3,44 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BeansEndpointTabSettings">
+    <option name="showContexts" value="false" />
+    <option name="showDoc" value="false" />
+    <option name="showFiles" value="false" />
+    <option name="showLibraryBeans" value="false" />
+    <option name="showLiveBeansGraph" value="false" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="增加统一的oss管理接口以及垃圾文件清理 增加了动态发布功能">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/MinioConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/BiliLikeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/CommonError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/RestErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/ValidationGroups.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/Mp4VideoUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/ProcessUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/VideoUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/PageParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/PageResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/MediaProcess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/MediaProcessHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/BigFilesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaFilesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaOpenController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaFilesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaProcessHistoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaProcessMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/MediaFileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileProcessServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/VideoTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/test/java/FFmpegTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="添加minio上传文件">
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/MediaUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/ModerationUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/ModerationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ModerationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/ModerationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/ThreadPoolTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/bili/admin/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/BiliLikeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/BiliLikeException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/UserDTOHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/UserDTOHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/bo/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/QueryMediaParamsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/UploadFileParamsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/dto/UploadFileResultDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/enums/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/MediaFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/MediaFileProcessService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BCategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BCollectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BCollectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BConcernMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BConcernMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BDynamicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BDynamicMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BDynamicReactionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BDynamicReactionsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BExceptionLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BExceptionLogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BFeedBackMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BFeedBackMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BImMessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BImMessageMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BMembershipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BMembershipMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BSayMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BSayMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BSeckillVoucherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BSeckillVoucherMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BTagsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BTagsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BUserInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BUserLogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVideoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BVideoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVideoTagMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BVideoTagMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVoucherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BVoucherMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/BVoucherOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/BVoucherOrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/CommentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/CommentsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/MenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/RoleMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/RoleMenuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/UserInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/UserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/UserRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoCollectionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoCollectionsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoCommentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoCommentsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoSectionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoSectionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoStatusMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoStatusMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTagMapMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoTagMapMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTagsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoTagsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideoTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideoTypeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/mapper/VideosMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/VideosMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/MenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/MenuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/UserInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCollectionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCollectionsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCommentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoCommentsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoSectionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoSectionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoStatusMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoStatusMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagMapMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagMapMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTagsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/resources/mapper/VideoTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/Mp4VideoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/Mp4VideoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/VideoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/VideoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/ModerationConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/BigFileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/MinioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ConcernServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ConcernServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/DynamicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/DynamicServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCollectionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCollectionsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCommentsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoCommentsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoSectionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoSectionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoStatusServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoStatusServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagMapServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagMapServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTagsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaFilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaFilesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaOpenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaOpenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaFilesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaFilesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaProcessMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaProcessMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/MediaFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/MediaFileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileProcessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileProcessServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/VideoTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/MediaTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkstyle-suppressions.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkstyle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/BigFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/BigFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/FFmpegTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/FFmpegTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/JwtUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/JwtUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/MinioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/MinioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -196,17 +129,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowLuaCheck.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\task" />
       <recent name="E:\idea_workspace\learn_project\bililike\Common\src\main\java\com\bili\common\utils" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\task" />
       <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\resources\com.bili.web.mapper" />
       <recent name="E:\idea_workspace\learn_project\bililike\Common\src\main\java\com\bili\common\exception" />
       <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\java\com\bili\pojo\dto" />
@@ -219,30 +156,18 @@
       <recent name="C:\lin\git\branch\w5\mini-bilibili\PoJo\src\main\resources\mapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.bili.web" />
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bili.common.config" />
       <recent name="com.bili.common.utils" />
       <recent name="com.bili.common" />
       <recent name="com.bili.web.config" />
       <recent name="com.bili.common.filter.user" />
-      <recent name="com.bili.admin.config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FFmpegTest.testSystemClass">
-    <configuration name="ProcessUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bili.common.utils.ProcessUtil" />
-      <module name="Common" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bili.common.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.WebApplication">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -254,53 +179,97 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FFmpegTest.testProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ModerationTest.testImageModeration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Web" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FFmpegTest" />
-      <option name="METHOD_NAME" value="testProcess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bili.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bili.web" />
+      <option name="MAIN_CLASS_NAME" value="com.bili.web.ModerationTest" />
+      <option name="METHOD_NAME" value="testImageModeration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FFmpegTest.testProcessBuilder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ModerationTest.testTextModeration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Web" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FFmpegTest" />
-      <option name="METHOD_NAME" value="testProcessBuilder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bili.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bili.web" />
+      <option name="MAIN_CLASS_NAME" value="com.bili.web.ModerationTest" />
+      <option name="METHOD_NAME" value="testTextModeration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FFmpegTest.testRuntime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ModerationTest.testUri" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Web" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FFmpegTest" />
-      <option name="METHOD_NAME" value="testRuntime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bili.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bili.web" />
+      <option name="MAIN_CLASS_NAME" value="com.bili.web.ModerationTest" />
+      <option name="METHOD_NAME" value="testUri" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FFmpegTest.testSystemClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ModerationTest.testVideoModeration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Web" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FFmpegTest" />
-      <option name="METHOD_NAME" value="testSystemClass" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bili.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bili.web" />
+      <option name="MAIN_CLASS_NAME" value="com.bili.web.ModerationTest" />
+      <option name="METHOD_NAME" value="testVideoModeration" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="Web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bili.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bili.web.WebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.ModerationTest.testVideoModeration" />
+      <item itemvalue="JUnit.ModerationTest.testTextModeration" />
+      <item itemvalue="JUnit.ModerationTest.testImageModeration" />
+      <item itemvalue="JUnit.ModerationTest.testUri" />
+      <item itemvalue="Spring Boot.WebApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FFmpegTest.testSystemClass" />
-        <item itemvalue="JUnit.FFmpegTest.testProcessBuilder" />
-        <item itemvalue="JUnit.FFmpegTest.testRuntime" />
-        <item itemvalue="JUnit.FFmpegTest.testProcess" />
-        <item itemvalue="Application.ProcessUtil" />
+        <item itemvalue="Spring Boot.WebApplication" />
+        <item itemvalue="JUnit.ModerationTest.testUri" />
+        <item itemvalue="JUnit.ModerationTest.testVideoModeration" />
+        <item itemvalue="JUnit.ModerationTest.testImageModeration" />
+        <item itemvalue="JUnit.ModerationTest.testTextModeration" />
       </list>
     </recent_temporary>
   </component>
@@ -355,7 +324,11 @@
       <workItem from="1724596336153" duration="4411000" />
       <workItem from="1731554152453" duration="271000" />
       <workItem from="1731554442907" duration="95000" />
-      <workItem from="1731554623808" duration="33716000" />
+      <workItem from="1731554623808" duration="68935000" />
+      <workItem from="1731751244753" duration="1742000" />
+      <workItem from="1731753765199" duration="5058000" />
+      <workItem from="1731759216606" duration="26238000" />
+      <workItem from="1731917511914" duration="9541000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -429,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723692876069</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="添加minio上传文件">
+      <created>1731653681622</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731653681622</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +448,33 @@
     <MESSAGE value="代码功能添加" />
     <MESSAGE value="登录注册接口完成测试和修改 jwt工具类大改" />
     <MESSAGE value="增加统一的oss管理接口以及垃圾文件清理 增加了动态发布功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加统一的oss管理接口以及垃圾文件清理 增加了动态发布功能" />
+    <MESSAGE value="添加minio上传文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加minio上传文件" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.security.config.annotation.web.builders.HttpSecurity" memberName="logger" />
+        <PinnedItemInfo parentTag="org.springframework.security.config.annotation.web.builders.HttpSecurity" memberName="authenticationManager" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((java.util.ArrayList)((HttpSecurity)param_1).filters).get(6)" custom="org.springframework.security.config.annotation.web.builders.HttpSecurity,java.util.ArrayList" />
+        <watch expression="((java.util.ArrayList)((HttpSecurity)param_1).filters).get(6)" language="JAVA" custom="org.springframework.security.config.annotation.web.builders.HttpSecurity,java.util.ArrayList" />
+        <watch expression="this" />
+        <watch expression="((java.util.ArrayList)((HttpSecurity)param_1).filters).get(6)" language="JAVA" custom="org.springframework.security.config.annotation.web.builders.HttpSecurity,java.util.ArrayList" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

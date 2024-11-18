@@ -3,6 +3,7 @@ package com.bili.web.service.impl;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bili.common.exception.BiliLikeException;
 import com.bili.pojo.dto.*;
 import com.bili.pojo.entity.MediaFiles;
@@ -37,7 +38,7 @@ import java.util.stream.Stream;
 
 @Slf4j
 @Service
-public class MediaFileServiceImpl implements MediaFileService {
+public class MediaFileServiceImpl extends ServiceImpl<MediaFilesMapper, MediaFiles> implements MediaFileService{
 
     @Autowired
     MediaFilesMapper mediaFilesMapper;
@@ -120,29 +121,18 @@ public class MediaFileServiceImpl implements MediaFileService {
             mediaFiles.setCreateDate(LocalDateTime.now());
             mediaFiles.setStatus("1");
             mediaFiles.setFilePath(objectName);
-            mediaFiles.setUrl("/" + bucket + "/" + objectName);
-            //if (contentType.contains("image") || contentType.contains("mp4")) {
-            //    mediaFiles.setUrl("/" + bucket + "/" + objectName);
-            //}
-            // 查阅数据字典，002003表示审核通过
-            mediaFiles.setAuditStatus("002003");
+            if (contentType.contains("image") || contentType.contains("mp4")) {
+                mediaFiles.setUrl("/" + bucket + "/" + objectName);
+            }
+            // 查阅数据字典，002003表示未审核
+            mediaFiles.setAuditStatus("002002");
         }
         int insert = mediaFilesMapper.insert(mediaFiles);
         if (insert <= 0) {
             BiliLikeException.cast("保存文件信息失败");
         }
         // 如果是avi视频，则额外添加至视频待处理表
-        if ("video/x-msvideo".equals(contentType)) {
-            MediaProcess mediaProcess = new MediaProcess();
-            BeanUtils.copyProperties(mediaFiles, mediaProcess);
-            mediaProcess.setStatus("1"); // 未处理
-            int processInsert = mediaProcessMapper.insert(mediaProcess);
-            if (processInsert <= 0) {
-                BiliLikeException.cast("保存avi视频到待处理表失败");
-            }
-            //记录待处理任务
-            addWaitingTask(mediaFiles);
-        }
+        addWaitingTask(mediaFiles);
         return mediaFiles;
     }
 
@@ -167,7 +157,10 @@ public class MediaFileServiceImpl implements MediaFileService {
             mediaProcess.setCreateDate(LocalDateTime.now());
             mediaProcess.setFailCount(0);//失败次数默认0
             mediaProcess.setUrl(null);
-            mediaProcessMapper.insert(mediaProcess);
+            int processInsert = mediaProcessMapper.insert(mediaProcess);
+            if (processInsert <= 0) {
+                BiliLikeException.cast("保存avi视频到待处理表失败");
+            }
         }
 
     }
@@ -248,7 +241,7 @@ public class MediaFileServiceImpl implements MediaFileService {
         return false;
     }
 
-    @Autowired
+    @Override
     public Boolean mergeChunks(Long userId, String fileMd5, int chunkTotal, UploadFileParamsDto uploadFileParamsDto) {
         //分块文件所在目录
         String chunkFileFolderPath = getChunkFileFolderPath(fileMd5);
@@ -368,19 +361,24 @@ public class MediaFileServiceImpl implements MediaFileService {
      * @param bucket     桶
      * @param objectName 对象名称
      */
-    public void addMediaFilesToMinIO(String filePath, String bucket, String objectName) {
+    public Boolean addMediaFilesToMinIO(String filePath, String bucket, String objectName) {
         String contentType = getContentType(objectName);
         try {
-            minioClient.uploadObject(UploadObjectArgs
-                    .builder()
-                    .bucket(bucket)
-                    .object(objectName)
-                    .filename(filePath)
-                    .contentType(contentType)
-                    .build());
+            UploadObjectArgs uploadObjectArgs = UploadObjectArgs.builder()
+                    .bucket(bucket)//桶
+                    .filename(filePath) //指定本地文件路径
+                    .object(objectName)//对象名 放在子目录下
+                    .contentType(contentType)//设置媒体文件类型
+                    .build();
+            //上传文件
+            minioClient.uploadObject(uploadObjectArgs);
+            log.debug("上传文件到minio成功,bucket:{},objectName:{},错误信息:{}",bucket,objectName);
+            return true;
         } catch (Exception e) {
-            BiliLikeException.cast("上传到文件系统出错:" + e.getMessage());
+            e.printStackTrace();
+            log.error("上传文件出错,bucket:{},objectName:{},错误信息:{}",bucket,objectName,e.getMessage());
         }
+        return false;
     }
 
 
@@ -524,5 +522,11 @@ public class MediaFileServiceImpl implements MediaFileService {
                 e.printStackTrace();
             }
         });
+    }
+
+    @Override
+    public List<MediaFiles> getMediaToBeModerationList(int count) {
+        List<MediaFiles> mediaToBeModerationList = mediaFilesMapper.getMediaToBeModerationList(count);
+        return mediaToBeModerationList;
     }
 }

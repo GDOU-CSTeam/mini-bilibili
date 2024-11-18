@@ -1,3 +1,4 @@
+package com.bili.web;
 
 import com.j256.simplemagic.ContentInfoUtil;
 import io.minio.*;

@@ -1,15 +1,24 @@
 package com.bili.web.controller;
 
+import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.core.util.StrUtil;
+import com.aliyun.green20220302.models.ImageModerationResponseBody;
+import com.aliyun.green20220302.models.VideoModerationResponseBody;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.bili.common.exception.BiliLikeException;
+import com.bili.common.utils.MediaUtil;
+import com.bili.common.utils.ModerationUtil;
 import com.bili.common.utils.Result;
 import com.bili.pojo.dto.*;
 import com.bili.pojo.entity.MediaFiles;
 import com.bili.web.service.MediaFileService;
+import io.micrometer.core.instrument.Metrics;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -28,6 +37,12 @@ public class MediaFilesController {
 
     @Autowired
     private MediaFileService mediaFileService;
+    @Autowired
+    private ModerationUtil moderationUtil;
+    @Autowired
+    private MediaUtil mediaUtil;
+    @Value("${minio.endpoint}")
+    private String endpoint;
 
 
     @Operation(summary = "媒资列表查询接口")
@@ -36,6 +51,7 @@ public class MediaFilesController {
         return mediaFileService.queryMediaFiles(userId, pageParams, queryMediaParamsDto);
 
     }
+
 
     @Operation(summary ="上传文件")
     @PostMapping(value = "/upload/coursefile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -56,6 +72,10 @@ public class MediaFilesController {
         Long userId = 1232141425L;
         try {
             UploadFileResultDto uploadFileResultDto = mediaFileService.uploadFile(userId, uploadFileParamsDto, upload.getBytes(), folder, objectName);
+
+            // 提交检测任务到异步线程
+            processModerationAsync(uploadFileResultDto);
+
             return uploadFileResultDto;
         } catch (IOException e) {
             BiliLikeException.cast("上传文件过程出错:" + e.getMessage());
@@ -63,4 +83,24 @@ public class MediaFilesController {
         return null;
     }
 
+    // 异步处理视频审核任务
+    @Async
+    void processModerationAsync(UploadFileResultDto uploadFileResultDto) {
+        try {
+            // 提交检测任务
+            String taskId = moderationUtil.videoModerateFirst(mediaUtil.getTotalUrl(uploadFileResultDto.getUrl()));
+            if(StrUtil.isNotEmpty(taskId)){
+                boolean update = mediaFileService.update(new LambdaUpdateWrapper<MediaFiles>()
+                        .eq(MediaFiles::getId, uploadFileResultDto.getId())
+                        //标识审核中
+                        .set(MediaFiles::getAuditStatus, "002003")
+                        .set(MediaFiles::getRemark, taskId));
+            }
+        } catch (Exception e) {
+            // 处理审核失败的情况
+            // 可在此处记录日志，或重试
+            e.printStackTrace();
+            throw new RuntimeException("视频审核提交失败", e);
+        }
+    }
 }

@@ -2,7 +2,6 @@ package com.bili.common.utils;
 
 import cn.hutool.core.lang.UUID;
 import com.aliyun.oss.ClientBuilderConfiguration;
-import com.aliyun.oss.ClientConfiguration;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.model.GetObjectRequest;

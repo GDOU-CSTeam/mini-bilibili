@@ -1,10 +1,12 @@
-
+package com.bili.web;
 
 import io.minio.*;
 import io.minio.messages.DeleteError;
 import io.minio.messages.DeleteObject;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -23,20 +25,24 @@ import java.util.stream.Stream;
  * @description 大文件处理测试
  * @date 2022/9/13 9:21
  */
+@SpringBootTest
 public class BigFileTest {
 
-    static MinioClient minioClient =
-            MinioClient.builder()
-                    .endpoint("http://159.75.174.133:9000")
-                    .credentials("root", "chuangshu")
-                    .build();
+    @Autowired
+    private MinioClient minioClient;
+
+    //static MinioClient minioClient =
+    //        MinioClient.builder()
+    //                .endpoint("http://159.75.174.133:9000")
+    //                .credentials("root", "chuangshu")
+    //                .build();
 
 
     //测试文件分块方法
     @Test
     public void testChunk() throws IOException {
-        File sourceFile = new File("D:\\WeChat Files\\wxid_usgzeneeygg922\\FileStorage\\Video\\2024-11\\1.mp4");
-        String chunkPath = "E:\\Download/bigfile_test/chunk/";
+        File sourceFile = new File("D:/WeChat Files/wxid_usgzeneeygg922/FileStorage/Video/2024-11/1.mp4");
+        String chunkPath = "E:/Download/bigfile_test/chunk/";
         File chunkFolder = new File(chunkPath);
         if (!chunkFolder.exists()) {
             chunkFolder.mkdirs();
@@ -80,11 +86,11 @@ public class BigFileTest {
     @Test
     public void testMerge() throws IOException {
         //块文件目录
-        File chunkFolder = new File("E:\\Download/bigfile_test/chunk/");
+        File chunkFolder = new File("E:/Download/bigfile_test/chunk/");
         //原始文件
-        File originalFile = new File("D:\\WeChat Files\\wxid_usgzeneeygg922\\FileStorage\\Video\\2024-11\\1.mp4");
+        File originalFile = new File("D:/WeChat Files/wxid_usgzeneeygg922/FileStorage/Video/2024-11/1.mp4");
         //合并文件
-        File mergeFile = new File("E:\\Download//bigfile_test/merge01.mp4");
+        File mergeFile = new File("E:/Download/bigfile_test/merge01.mp4");
         if (mergeFile.exists()) {
             mergeFile.delete();
         }
@@ -139,7 +145,7 @@ public class BigFileTest {
     //将分块文件上传至minio
     @Test
     public void uploadChunk(){
-        String chunkFolderPath = "E:\\Download/bigfile_test/chunk/";
+        String chunkFolderPath = "E:/Download/bigfile_test/chunk/";
         File chunkFolder = new File(chunkFolderPath);
         //分块文件
         File[] files = chunkFolder.listFiles();

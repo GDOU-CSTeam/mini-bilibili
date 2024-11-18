@@ -4,7 +4,7 @@ package com.bili.common.exception;
 
 
 /**
- * @description 学成在线项目异常类
+ * @description bili项目异常类
  */
 public class BiliLikeException extends RuntimeException {
 

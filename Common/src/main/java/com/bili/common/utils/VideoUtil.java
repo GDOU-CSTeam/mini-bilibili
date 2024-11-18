@@ -13,7 +13,7 @@ import java.util.List;
 public class VideoUtil {
 
     //ffmpeg的安装位置
-    String ffmpeg_path = "D:\\Program Files\\ffmpeg-20180227-fa0c9d6-win64-static\\bin\\ffmpeg.exe";
+    String ffmpeg_path = "D:/develop/ffmpeg-6.0-essentials_build/bin/ffmpeg.exe";
 
     public VideoUtil(String ffmpeg_path) {
         this.ffmpeg_path = ffmpeg_path;
@@ -90,12 +90,12 @@ public class VideoUtil {
                 }
                 try {
                     while (in.available() > 0) {
-                        Character c = new Character((char) in.read());
+                        char c = (char) in.read(); // 直接使用 char 类型
                         outputString.append(c);
                         System.out.print(c);
                     }
                     while (error.available() > 0) {
-                        Character c = new Character((char) in.read());
+                        char c = (char) in.read(); // 直接使用 char 类型
                         outputString.append(c);
                         System.out.print(c);
                     }
@@ -125,9 +125,9 @@ public class VideoUtil {
 
 
     public static void main(String[] args) throws IOException {
-        String ffmpeg_path = "D:\\Program Files\\ffmpeg-20180227-fa0c9d6-win64-static\\bin\\ffmpeg.exe";//ffmpeg的安装位置
+        String ffmpeg_path = "D:/develop/ffmpeg-6.0-essentials_build/bin/ffmpeg.exe";//ffmpeg的安装位置
         VideoUtil videoUtil = new VideoUtil(ffmpeg_path);
-        String video_time = videoUtil.get_video_time("E:\\ffmpeg_test\\1.avi");
+        String video_time = videoUtil.get_video_time("E:/Download/FileSamples/AVI/1.avi");
         System.out.println(video_time);
     }
 }
