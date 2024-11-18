@@ -7,6 +7,7 @@ import okio.BufferedSource;
 import okio.Okio;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
 
 import java.io.*;
@@ -21,11 +22,8 @@ import java.security.NoSuchAlgorithmException;
  */
 public class MinioTest {
 
-    static MinioClient minioClient =
-            MinioClient.builder()
-                    .endpoint("http://159.75.174.133:9000")
-                    .credentials("root", "chuangshu")
-                    .build();
+    @Autowired
+    private MinioClient minioClient;
 
    //上传文件
     @Test

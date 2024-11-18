@@ -31,13 +31,6 @@ public class BigFileTest {
     @Autowired
     private MinioClient minioClient;
 
-    //static MinioClient minioClient =
-    //        MinioClient.builder()
-    //                .endpoint("http://159.75.174.133:9000")
-    //                .credentials("root", "chuangshu")
-    //                .build();
-
-
     //测试文件分块方法
     @Test
     public void testChunk() throws IOException {
