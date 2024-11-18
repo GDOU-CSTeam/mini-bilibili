@@ -201,9 +201,9 @@ videoprocess:
 # 文本审核服务配置
 moderation:
   # 阿里云访问密钥ID
-  access-key-id: ${bili.moderation.access-key-id}
-  # 阿里云访问密钥密码
-  access-key-secret: ${bili.moderation.access-key-secret}
+#  access-key-id: ${bili.moderation.access-key-id}
+#  # 阿里云访问密钥密码
+#  access-key-secret: ${bili.moderation.access-key-secret}
   # 区域ID，表示文本审核服务所在的地域
   region-id: ${bili.moderation.region-id}
   # 服务接入点
