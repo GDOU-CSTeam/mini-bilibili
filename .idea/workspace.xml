@@ -11,39 +11,7 @@
     <option name="showLiveBeansGraph" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="添加minio上传文件">
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/MediaUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/ModerationUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/ModerationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ModerationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/ModerationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/ThreadPoolTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/BiliLikeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/exception/BiliLikeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/AliyunOss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/Mp4VideoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/Mp4VideoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/VideoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/VideoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/vo/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/constant/ModerationConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaFilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaFilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaOpenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/MediaOpenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaFilesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaFilesMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaProcessMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/MediaProcessMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/MediaFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/MediaFileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileProcessServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileProcessServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/VideoTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/MediaTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/test/java/BigFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/BigFileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/test/java/FFmpegTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/FFmpegTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/test/java/JwtUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/JwtUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/test/java/MinioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/MinioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="添加阿里云内容安全验证" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -328,7 +296,7 @@
       <workItem from="1731751244753" duration="1742000" />
       <workItem from="1731753765199" duration="5058000" />
       <workItem from="1731759216606" duration="26238000" />
-      <workItem from="1731917511914" duration="9541000" />
+      <workItem from="1731917511914" duration="9869000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -409,7 +377,21 @@
       <option name="project" value="LOCAL" />
       <updated>1731653681622</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="添加阿里云内容安全验证">
+      <created>1731936250225</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731936250225</updated>
+    </task>
+    <task id="LOCAL-00012" summary="添加阿里云内容安全验证">
+      <created>1731936478783</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731936478783</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +431,8 @@
     <MESSAGE value="登录注册接口完成测试和修改 jwt工具类大改" />
     <MESSAGE value="增加统一的oss管理接口以及垃圾文件清理 增加了动态发布功能" />
     <MESSAGE value="添加minio上传文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加minio上传文件" />
+    <MESSAGE value="添加阿里云内容安全验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加阿里云内容安全验证" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

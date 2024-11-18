@@ -205,9 +205,9 @@ moderation:
   # 阿里云访问密钥密码
   access-key-secret: ${bili.moderation.access-key-secret}
   # 区域ID，表示文本审核服务所在的地域
-  region-id: cn-shenzhen
+  region-id: ${bili.moderation.region-id}
   # 服务接入点
-  endpoint: green-cip.cn-shenzhen.aliyuncs.com
+  endpoint: ${bili.moderation.endpoint}
   # 读取超时时间，单位为毫秒
   read-timeout: 6000
   # 连接超时时间，单位为毫秒
