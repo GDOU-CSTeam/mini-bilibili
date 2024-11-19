@@ -12,6 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="添加阿里云内容安全验证">
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/CacheClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/RedisData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -298,7 +301,7 @@
       <workItem from="1731751244753" duration="1742000" />
       <workItem from="1731753765199" duration="5058000" />
       <workItem from="1731759216606" duration="26238000" />
-      <workItem from="1731917511914" duration="10534000" />
+      <workItem from="1731917511914" duration="12537000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -414,7 +417,21 @@
       <option name="project" value="LOCAL" />
       <updated>1731937052514</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加阿里云内容安全验证">
+      <created>1731937194987</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731937194987</updated>
+    </task>
+    <task id="LOCAL-00017" summary="添加阿里云内容安全验证">
+      <created>1731937229783</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731937229783</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

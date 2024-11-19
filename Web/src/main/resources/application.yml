@@ -200,10 +200,14 @@ videoprocess:
 
 # 文本审核服务配置
 moderation:
+  # 阿里云访问密钥ID
+  access-key-id: ${bili.moderation.access-key-id}
+  # 阿里云访问密钥密码
+  access-key-secret: ${bili.moderation.access-key-secret}
   # 区域ID，表示文本审核服务所在的地域
-  region-id: ${bili.moderation.region-id}
+  region-id: cn-shenzhen
   # 服务接入点
-  endpoint: ${bili.moderation.endpoint}
+  endpoint: green-cip.cn-shenzhen.aliyuncs.com
   # 读取超时时间，单位为毫秒
   read-timeout: 6000
   # 连接超时时间，单位为毫秒
