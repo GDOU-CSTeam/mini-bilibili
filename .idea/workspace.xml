@@ -11,25 +11,12 @@
     <option name="showLiveBeansGraph" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="解决缓存穿透，击穿，雪崩问题">
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/ILock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/RedisIdWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/SimpleRedisLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/RecommendationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/RedisSystemTagsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/RedisUserModelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/TagProbabilityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/UserBehaviorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/VideoRecommendationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/GuavaCacheService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/resources/seckill.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/resources/unlock.lua" afterDir="false" />
+    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="完善兴趣推送系统">
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/HotRankService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/HotVideoPushService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/VideoHotnessService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/HotVideoScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/MediaTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/MediaTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +302,7 @@
       <workItem from="1731751244753" duration="1742000" />
       <workItem from="1731753765199" duration="5058000" />
       <workItem from="1731759216606" duration="26238000" />
-      <workItem from="1731917511914" duration="24487000" />
+      <workItem from="1731917511914" duration="25644000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -452,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731992877417</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="完善兴趣推送系统">
+      <created>1732109164030</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732109164030</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +488,9 @@
     <MESSAGE value="添加minio上传文件" />
     <MESSAGE value="添加阿里云内容安全验证" />
     <MESSAGE value="解决缓存穿透，击穿，雪崩问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决缓存穿透，击穿，雪崩问题" />
+    <MESSAGE value="实现兴趣推送系统" />
+    <MESSAGE value="完善兴趣推送系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善兴趣推送系统" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
