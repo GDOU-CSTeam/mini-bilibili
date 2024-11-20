@@ -18,6 +18,7 @@ import io.minio.messages.DeleteError;
 import io.minio.messages.DeleteObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -65,7 +66,6 @@ public class MediaFileServiceImpl extends ServiceImpl<MediaFilesMapper, MediaFil
      * @param objectName          对象名称
      */
     @Override
-    @Transactional
     public UploadFileResultDto uploadFile(Long userId, UploadFileParamsDto uploadFileParamsDto, byte[] bytes, String folder, String objectName) {
         String fileMD5 = DigestUtils.md5DigestAsHex(bytes);
         if (StrUtil.isEmpty(folder)) {
@@ -84,8 +84,10 @@ public class MediaFileServiceImpl extends ServiceImpl<MediaFilesMapper, MediaFil
         try {
             //上传文件到minio
             addMediaFilesToMinIO(bytes, bucket_files, objectName);
-            //将文件信息添加到文件表
-            MediaFiles mediaFiles = addMediaFilesToDB(userId, uploadFileParamsDto, objectName, fileMD5, bucket_files);
+            // 获取当前代理对象
+            MediaFileService proxy = (MediaFileService) AopContext.currentProxy();
+            //将文件信息添加到文件表(代理对象调用，避免事务失效)
+            MediaFiles mediaFiles = proxy.addMediaFilesToDB(userId, uploadFileParamsDto, objectName, fileMD5, bucket_files);
             //构建返回值
             UploadFileResultDto uploadFileResultDto = new UploadFileResultDto();
             BeanUtils.copyProperties(mediaFiles, uploadFileResultDto);
@@ -106,6 +108,7 @@ public class MediaFileServiceImpl extends ServiceImpl<MediaFilesMapper, MediaFil
      * @param fileMD5             文件的md5码
      * @param bucket              桶
      */
+    @Transactional
     public MediaFiles addMediaFilesToDB(Long userId, UploadFileParamsDto uploadFileParamsDto, String objectName, String fileMD5, String bucket) {
         // 根据文件名获取Content-Type
         String contentType = getContentType(objectName);

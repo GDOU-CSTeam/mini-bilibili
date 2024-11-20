@@ -36,5 +36,16 @@
             <artifactId>simplemagic</artifactId>
             <version>1.17</version>
         </dependency>
+        <!--启用aspectJ自动代理-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+        <!--guava cache-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
     </dependencies>
 </project>

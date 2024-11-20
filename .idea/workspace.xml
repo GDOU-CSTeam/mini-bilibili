@@ -11,11 +11,25 @@
     <option name="showLiveBeansGraph" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="添加阿里云内容安全验证">
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/CacheClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/RedisData.java" afterDir="false" />
+    <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="解决缓存穿透，击穿，雪崩问题">
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/ILock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/RedisIdWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/SimpleRedisLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/RecommendationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/RedisSystemTagsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/RedisUserModelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/TagProbabilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/UserBehaviorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/VideoRecommendationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/GuavaCacheService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/resources/seckill.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/resources/unlock.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/WebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/MediaFileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/MediaTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/MediaTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +119,7 @@
     <property name="ToolWindowLuaCheck.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
@@ -115,26 +129,26 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\controller\admin" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\resources" />
       <recent name="E:\idea_workspace\learn_project\bililike\Common\src\main\java\com\bili\common\utils" />
       <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\task" />
       <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\resources\com.bili.web.mapper" />
-      <recent name="E:\idea_workspace\learn_project\bililike\Common\src\main\java\com\bili\common\exception" />
-      <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\java\com\bili\pojo\dto" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\resources\mapper" />
+      <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\resources" />
       <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\java\com\bili\pojo\entity" />
       <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\mapper" />
       <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\service" />
-      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\service\impl" />
-      <recent name="C:\lin\git\branch\w5\mini-bilibili\PoJo\src\main\resources\mapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.bili.web" />
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.bili.common.config" />
       <recent name="com.bili.common.utils" />
+      <recent name="com.bili.common.config" />
       <recent name="com.bili.common" />
       <recent name="com.bili.web.config" />
       <recent name="com.bili.common.filter.user" />
@@ -301,7 +315,7 @@
       <workItem from="1731751244753" duration="1742000" />
       <workItem from="1731753765199" duration="5058000" />
       <workItem from="1731759216606" duration="26238000" />
-      <workItem from="1731917511914" duration="12537000" />
+      <workItem from="1731917511914" duration="24487000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -431,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1731937229783</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="解决缓存穿透，击穿，雪崩问题">
+      <created>1731992877417</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731992877417</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +493,8 @@
     <MESSAGE value="增加统一的oss管理接口以及垃圾文件清理 增加了动态发布功能" />
     <MESSAGE value="添加minio上传文件" />
     <MESSAGE value="添加阿里云内容安全验证" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加阿里云内容安全验证" />
+    <MESSAGE value="解决缓存穿透，击穿，雪崩问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决缓存穿透，击穿，雪崩问题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

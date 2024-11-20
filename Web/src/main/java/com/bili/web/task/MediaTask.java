@@ -68,6 +68,7 @@ public class MediaTask {
     @Scheduled(cron = "0 * * * * ?")
     public void videoJobHandler2() {
         processMedia(2);  // 执行任务3
+        // 获取审核任务结果
         moderationVideo();
     }
 
