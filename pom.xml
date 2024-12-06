@@ -220,6 +220,21 @@
             <artifactId>green20220302</artifactId>
             <version>2.2.8</version>
         </dependency>
+
+        <!--RoaringBitmap-->
+        <dependency>
+            <groupId>org.roaringbitmap</groupId>
+            <artifactId>RoaringBitmap</artifactId>
+            <version>0.9.40</version>  <!-- 请根据需要选择合适的版本 -->
+        </dependency>
+
+        <!--guava cache-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+
     </dependencies>
 
     <!-- 构建配置，定义项目构建过程 -->

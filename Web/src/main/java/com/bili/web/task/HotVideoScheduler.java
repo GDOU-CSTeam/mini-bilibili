@@ -12,13 +12,13 @@ public class HotVideoScheduler {
     private VideoHotnessService videoHotnessService;
 
     // 每3小时更新一次所有视频热度
-    @Scheduled(cron = "0 0 */3 * * ?") 
+    //@Scheduled(cron = "0 0 */3 * * ?")
     public void updateHotVideos() {
         videoHotnessService.updateAllVideosHotness();
     }
 
     // 每小时更新热度排行榜
-    @Scheduled(cron = "0 0 * * * ?") 
+    //@Scheduled(cron = "0 0 * * * ?")
     public void updateHotVideoRankings() {
         // 执行热度排行榜更新
         // 暂时不进行额外操作，Redis 直接更新

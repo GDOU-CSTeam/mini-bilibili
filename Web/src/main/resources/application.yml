@@ -77,8 +77,6 @@ mybatis-plus:
       logic-not-delete-value: 0 # 逻辑未删除值
 
 
-
-
 # 配置Snowflake算法的相关参数，用于生成分布式ID
 snowflake:
   datacenterId: 1

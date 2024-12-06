@@ -12,11 +12,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ed2e7ab-905c-4783-a4e3-9506e78c08f3" name="更改" comment="完善兴趣推送系统">
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/HotRankService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/HotVideoPushService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/VideoHotnessService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/HotVideoScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/utils/RoaringBitmapUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/ProductUserBitmap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PoJo/src/main/java/com/bili/pojo/entity/UserActionRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/cache/ActionRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/cache/ActionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/cache/GuavaCacheConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/UserActionRecordsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/ProductUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mapper/UserActionRecordsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/IUserActionRecordsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/ProductUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserActionRecordsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/resources/mapper/ProductUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/main/resources/mapper/UserActionRecordsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/RoaringBitmapTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/com/bili/common/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Web/logs/slf4j-SpringTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/mq/config/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/GuavaCacheService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/VideoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/HotVideoScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/HotVideoScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/MediaTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/java/com/bili/web/task/MediaTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/FFmpegTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/FFmpegTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/ModerationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Web/src/test/java/com/bili/web/ModerationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/slf4j-SpringTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +134,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Web/src/main/java/com/bili/web/controller/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -123,11 +148,11 @@
       <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\resources\com.bili.web.mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\resources\mapper" />
-      <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\resources" />
-      <recent name="E:\idea_workspace\learn_project\bililike\PoJo\src\main\java\com\bili\pojo\entity" />
-      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\mapper" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\controller" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\resources\mapper" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\service\impl" />
       <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\service" />
+      <recent name="E:\idea_workspace\learn_project\bililike\Web\src\main\java\com\bili\web\mapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.bili.web" />
@@ -142,18 +167,20 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WebApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModerationTest.testImageModeration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FFmpegTest.testSystemClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Web" />
       <extension name="coverage">
         <pattern>
@@ -162,14 +189,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.bili.web" />
-      <option name="MAIN_CLASS_NAME" value="com.bili.web.ModerationTest" />
-      <option name="METHOD_NAME" value="testImageModeration" />
+      <option name="MAIN_CLASS_NAME" value="com.bili.web.FFmpegTest" />
+      <option name="METHOD_NAME" value="testSystemClass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModerationTest.testTextModeration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoaringBitmapTest.testGetUniqueUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Web" />
       <extension name="coverage">
         <pattern>
@@ -178,14 +205,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.bili.web" />
-      <option name="MAIN_CLASS_NAME" value="com.bili.web.ModerationTest" />
-      <option name="METHOD_NAME" value="testTextModeration" />
+      <option name="MAIN_CLASS_NAME" value="com.bili.web.RoaringBitmapTest" />
+      <option name="METHOD_NAME" value="testGetUniqueUsers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModerationTest.testUri" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoaringBitmapTest.testGetUniqueUsers2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Web" />
       <extension name="coverage">
         <pattern>
@@ -194,14 +221,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.bili.web" />
-      <option name="MAIN_CLASS_NAME" value="com.bili.web.ModerationTest" />
-      <option name="METHOD_NAME" value="testUri" />
+      <option name="MAIN_CLASS_NAME" value="com.bili.web.RoaringBitmapTest" />
+      <option name="METHOD_NAME" value="testGetUniqueUsers2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModerationTest.testVideoModeration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RoaringBitmapTest.testGetUniqueUsers4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Web" />
       <extension name="coverage">
         <pattern>
@@ -210,8 +237,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.bili.web" />
-      <option name="MAIN_CLASS_NAME" value="com.bili.web.ModerationTest" />
-      <option name="METHOD_NAME" value="testVideoModeration" />
+      <option name="MAIN_CLASS_NAME" value="com.bili.web.RoaringBitmapTest" />
+      <option name="METHOD_NAME" value="testGetUniqueUsers4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -231,19 +258,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ModerationTest.testVideoModeration" />
-      <item itemvalue="JUnit.ModerationTest.testTextModeration" />
-      <item itemvalue="JUnit.ModerationTest.testImageModeration" />
-      <item itemvalue="JUnit.ModerationTest.testUri" />
+      <item itemvalue="JUnit.RoaringBitmapTest.testGetUniqueUsers" />
+      <item itemvalue="JUnit.RoaringBitmapTest.testGetUniqueUsers2" />
+      <item itemvalue="JUnit.RoaringBitmapTest.testGetUniqueUsers4" />
+      <item itemvalue="JUnit.FFmpegTest.testSystemClass" />
       <item itemvalue="Spring Boot.WebApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.WebApplication" />
-        <item itemvalue="JUnit.ModerationTest.testUri" />
-        <item itemvalue="JUnit.ModerationTest.testVideoModeration" />
-        <item itemvalue="JUnit.ModerationTest.testImageModeration" />
-        <item itemvalue="JUnit.ModerationTest.testTextModeration" />
+        <item itemvalue="JUnit.RoaringBitmapTest.testGetUniqueUsers" />
+        <item itemvalue="JUnit.FFmpegTest.testSystemClass" />
+        <item itemvalue="JUnit.RoaringBitmapTest.testGetUniqueUsers2" />
+        <item itemvalue="JUnit.RoaringBitmapTest.testGetUniqueUsers4" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +329,10 @@
       <workItem from="1731751244753" duration="1742000" />
       <workItem from="1731753765199" duration="5058000" />
       <workItem from="1731759216606" duration="26238000" />
-      <workItem from="1731917511914" duration="25644000" />
+      <workItem from="1731917511914" duration="26403000" />
+      <workItem from="1732189510874" duration="1579000" />
+      <workItem from="1733307973715" duration="43429000" />
+      <workItem from="1733467635103" duration="7151000" />
     </task>
     <task id="LOCAL-00001" summary="项目结构修改与代码添加">
       <option name="closed" value="true" />
@@ -446,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1732109164030</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="完善兴趣推送系统">
+      <created>1732110182047</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732110182047</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,6 +537,16 @@
           <line>26</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserActionRecordsServiceImpl.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Web/src/main/java/com/bili/web/service/impl/UserActionRecordsServiceImpl.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -508,14 +555,6 @@
         <PinnedItemInfo parentTag="org.springframework.security.config.annotation.web.builders.HttpSecurity" memberName="authenticationManager" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="((java.util.ArrayList)((HttpSecurity)param_1).filters).get(6)" custom="org.springframework.security.config.annotation.web.builders.HttpSecurity,java.util.ArrayList" />
-        <watch expression="((java.util.ArrayList)((HttpSecurity)param_1).filters).get(6)" language="JAVA" custom="org.springframework.security.config.annotation.web.builders.HttpSecurity,java.util.ArrayList" />
-        <watch expression="this" />
-        <watch expression="((java.util.ArrayList)((HttpSecurity)param_1).filters).get(6)" language="JAVA" custom="org.springframework.security.config.annotation.web.builders.HttpSecurity,java.util.ArrayList" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

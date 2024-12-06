@@ -1,3 +1,48 @@
-[2024-11-18 19:14:30.023+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
-[2024-11-18 19:14:30.047+0800] [main] INFO  com.bili.web.ModerationTest [50]- Starting ModerationTest using Java 17.0.8 with PID 17124 (started by 31548 in E:\idea_workspace\learn_project\bililike\Web)
-[2024-11-18 19:14:30.049+0800] [main] INFO  com.bili.web.ModerationTest [660]- The following 1 profile is active: "dev"
+[2024-12-06 15:41:22.923+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-06 15:41:22.945+0800] [main] INFO  com.bili.web.RoaringBitmapTest [50]- Starting RoaringBitmapTest using Java 17.0.8 with PID 181544 (started by 31548 in E:\idea_workspace\learn_project\bililike\Web)
+[2024-12-06 15:41:22.947+0800] [main] INFO  com.bili.web.RoaringBitmapTest [660]- The following 1 profile is active: "dev"
+[2024-12-06 15:41:24.092+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-12-06 15:41:24.095+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-12-06 15:41:24.131+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+[2024-12-06 15:41:25.206+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-12-06 15:41:25.597+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-12-06 15:41:27.819+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-12-06 15:41:31.297+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-12-06 15:41:31.373+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@620ba19c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@179367ff, org.springframework.security.web.context.SecurityContextHolderFilter@4bcfa08b, org.springframework.security.web.header.HeaderWriterFilter@7c58c10f, org.springframework.web.filter.CorsFilter@7b4b6dca, org.springframework.security.web.authentication.logout.LogoutFilter@3dd22110, com.bili.common.filter.JwtAuthenticationTokenFilter@4add4dff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d343793, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27015621, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3622c9f0, org.springframework.security.web.session.SessionManagementFilter@1e085e71, org.springframework.security.web.access.ExceptionTranslationFilter@52f8effb, org.springframework.security.web.access.intercept.AuthorizationFilter@4cb084b]
+[2024-12-06 15:41:32.263+0800] [main] WARN  c.b.m.c.injector.DefaultSqlInjector [52]- class com.bili.pojo.entity.BSeckillVoucher ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[2024-12-06 15:41:32.544+0800] [main] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-12-06 15:41:32.782+0800] [main] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#33f059ad:0/SimpleConnection@46b2e0e4 [delegate=amqp://root@159.75.174.133:5672/, localPort=64242]
+[2024-12-06 15:41:33.477+0800] [main] INFO  com.bili.web.RoaringBitmapTest [56]- Started RoaringBitmapTest in 10.811 seconds (process running for 11.614)
+[2024-12-06 15:41:34.289+0800] [main] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-12-06 15:41:34.919+0800] [main] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4967d14c
+[2024-12-06 15:41:34.923+0800] [main] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-12-06 15:41:35.226+0800] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer [688]- Waiting for workers to finish.
+[2024-12-06 15:41:35.260+0800] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer [692]- Successfully waited for workers to finish.
+[2024-12-06 15:41:35.292+0800] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer [688]- Waiting for workers to finish.
+[2024-12-06 15:41:35.460+0800] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer [692]- Successfully waited for workers to finish.
+[2024-12-06 15:41:35.514+0800] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [350]- HikariPool-1 - Shutdown initiated...
+[2024-12-06 15:41:35.867+0800] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [352]- HikariPool-1 - Shutdown completed.
+[2024-12-06 15:46:18.765+0800] [background-preinit] INFO  o.h.validator.internal.util.Version [21]- HV000001: Hibernate Validator 8.0.1.Final
+[2024-12-06 15:46:18.788+0800] [main] INFO  com.bili.web.RoaringBitmapTest [50]- Starting RoaringBitmapTest using Java 17.0.8 with PID 35268 (started by 31548 in E:\idea_workspace\learn_project\bililike\Web)
+[2024-12-06 15:46:18.790+0800] [main] INFO  com.bili.web.RoaringBitmapTest [660]- The following 1 profile is active: "dev"
+[2024-12-06 15:46:20.062+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [292]- Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-12-06 15:46:20.066+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [139]- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-12-06 15:46:20.106+0800] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate [208]- Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+[2024-12-06 15:46:21.230+0800] [main] INFO  org.redisson.Version [43]- Redisson 3.32.0
+[2024-12-06 15:46:21.622+0800] [redisson-netty-1-6] INFO  o.r.connection.ConnectionsHolder [130]- 1 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-12-06 15:46:23.772+0800] [redisson-netty-1-19] INFO  o.r.connection.ConnectionsHolder [130]- 24 connections initialized for 159.75.174.133/159.75.174.133:6379
+[2024-12-06 15:46:28.660+0800] [main] INFO  o.s.b.a.e.web.EndpointLinksResolver [58]- Exposing 1 endpoint(s) beneath base path '/actuator'
+[2024-12-06 15:46:28.778+0800] [main] INFO  o.s.s.web.DefaultSecurityFilterChain [54]- Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@32787dee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6afd0ef8, org.springframework.security.web.context.SecurityContextHolderFilter@3dcf26b5, org.springframework.security.web.header.HeaderWriterFilter@7b2adbde, org.springframework.web.filter.CorsFilter@47fe4c3e, org.springframework.security.web.authentication.logout.LogoutFilter@67f5066e, com.bili.common.filter.JwtAuthenticationTokenFilter@25dc2c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@609a996f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a6dfbb2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a8042a5, org.springframework.security.web.session.SessionManagementFilter@3d577add, org.springframework.security.web.access.ExceptionTranslationFilter@1a91d15f, org.springframework.security.web.access.intercept.AuthorizationFilter@45dce9f7]
+[2024-12-06 15:46:30.003+0800] [main] WARN  c.b.m.c.injector.DefaultSqlInjector [52]- class com.bili.pojo.entity.BSeckillVoucher ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[2024-12-06 15:46:30.269+0800] [main] INFO  o.s.a.r.c.CachingConnectionFactory [650]- Attempting to connect to: [159.75.174.133:5672]
+[2024-12-06 15:46:30.461+0800] [main] INFO  o.s.a.r.c.CachingConnectionFactory [592]- Created new connection: rabbitConnectionFactory#32cda33c:0/SimpleConnection@4928a347 [delegate=amqp://root@159.75.174.133:5672/, localPort=64436]
+[2024-12-06 15:46:31.164+0800] [main] INFO  com.bili.web.RoaringBitmapTest [56]- Started RoaringBitmapTest in 12.69 seconds (process running for 13.625)
+[2024-12-06 15:46:31.818+0800] [main] INFO  com.zaxxer.hikari.HikariDataSource [110]- HikariPool-1 - Starting...
+[2024-12-06 15:46:32.438+0800] [main] INFO  com.zaxxer.hikari.pool.HikariPool [565]- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c7b276
+[2024-12-06 15:46:32.445+0800] [main] INFO  com.zaxxer.hikari.HikariDataSource [123]- HikariPool-1 - Start completed.
+[2024-12-06 15:46:32.817+0800] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer [688]- Waiting for workers to finish.
+[2024-12-06 15:46:32.849+0800] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer [688]- Waiting for workers to finish.
+[2024-12-06 15:46:32.956+0800] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer [692]- Successfully waited for workers to finish.
+[2024-12-06 15:46:33.159+0800] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer [692]- Successfully waited for workers to finish.
+[2024-12-06 15:46:33.244+0800] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [350]- HikariPool-1 - Shutdown initiated...
+[2024-12-06 15:46:33.348+0800] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource [352]- HikariPool-1 - Shutdown completed.

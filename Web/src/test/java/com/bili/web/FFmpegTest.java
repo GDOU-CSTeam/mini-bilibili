@@ -67,11 +67,8 @@ public class FFmpegTest {
 
     @Test
     public void testSystemClass(){
-        System.out.println(System.currentTimeMillis());
-        // 获取系统的所有属性
-        //System.out.println(System.getProperties());
-        // 获取系统指定的属性
-        System.out.println(System.getProperty("java.version"));
+        Byte b = 9;
+        System.out.println(b);
     }
 
     private long convertFileSize(long byteSize){

@@ -49,7 +49,7 @@ public class MediaTask {
     /**
      * 视频处理任务0，每分钟的第20秒执行
      */
-    @Scheduled(cron = "20 * * * * ?")
+    //@Scheduled(cron = "20 * * * * ?")
     public void videoJobHandler0() {
         processMedia(0);  // 执行任务1
     }
@@ -57,7 +57,7 @@ public class MediaTask {
     /**
      * 视频处理任务1，每分钟的第40秒执行
      */
-    @Scheduled(cron = "40 * * * * ?")
+    //@Scheduled(cron = "40 * * * * ?")
     public void videoJobHandler1() {
         processMedia(1);  // 执行任务2
     }
@@ -65,7 +65,7 @@ public class MediaTask {
     /**
      * 视频处理任务2，每分钟的第60秒执行（即每分钟结束时）
      */
-    @Scheduled(cron = "0 * * * * ?")
+    //@Scheduled(cron = "0 * * * * ?")
     public void videoJobHandler2() {
         processMedia(2);  // 执行任务3
         // 获取审核任务结果
